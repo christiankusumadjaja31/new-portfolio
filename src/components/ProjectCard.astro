@@ -1,0 +1,108 @@
+---
+// src/components/ProjectCard.astro
+
+interface Props {
+  number: string;
+  title: string;
+  context: string;
+  summary: string;
+  impacts: string[];
+  learnings: string[];
+}
+
+const { number, title, context, summary, impacts, learnings } = Astro.props as Props;
+---
+
+<article class="project-card container">
+  <div class="project-header">
+    <h2>{number}. {title}</h2>
+    <span class="project-context">{context}</span>
+  </div>
+  
+  <p class="project-summary">{summary}</p>
+  
+  <div class="project-details">
+    <div class="detail-column">
+      <h3 class="heading-font">Impact</h3>
+      <ul>
+        {impacts.map((impact) => <li>{impact}</li>)}
+      </ul>
+    </div>
+    <div class="detail-column">
+      <h3 class="heading-font">Learnings</h3>
+      <ul>
+        {learnings.map((learning) => <li>{learning}</li>)}
+      </ul>
+    </div>
+  </div>
+  
+  <div class="project-visual">
+    <slot /> 
+  </div>
+</article>
+
+<style>
+  .project-card {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+  }
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-context {
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    color: var(--accent-color);
+    font-weight: 600;
+    text-align: right;
+  }
+
+  .project-summary {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .project-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .detail-column ul {
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  
+  .detail-column li { 
+    margin-bottom: 0.5rem; 
+    font-size: 0.95rem; 
+  }
+
+  .project-visual {
+    width: 100%;
+    background-color: #ebeae4;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  @media print {
+    .project-card {
+      padding-top: 2rem;
+      padding-bottom: 0;
+      page-break-inside: avoid;
+      break-after: page; 
+    }
+    .project-visual {
+       max-height: 400px; 
+    }
+  }
+</style>

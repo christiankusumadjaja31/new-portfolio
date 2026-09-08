@@ -1,0 +1,85 @@
+---
+// src/components/About.astro
+---
+<section id="about" class="about container">
+  <div class="about-grid">
+    <div class="about-title">
+      <h2 class="heading-font">Interest &<br/>Motivation</h2>
+    </div>
+    
+    <div class="about-content">
+      <p>My journey into technology is deeply rooted in my experience teaching mathematics to high school students. Breaking down complex concepts like logarithms and trigonometry into simple, digestible logic taught me a foundational problem-solving mindset.</p>
+      <p>I bring this exact interdisciplinary approach into my tech stack. Whether I am architecting robust backend databases, evaluating the faithfulness of XAI models, or crafting intuitive frontend interfaces, my goal remains the same: transforming complex architectures into clear, elegant solutions.</p>
+      
+      <div class="action-buttons">
+        <a href="/CV_Christian_Kusumadjaja.pdf" download class="btn-outline">Download CV</a>
+        <button onclick="window.print()" class="btn-solid">Download Portfolio (PDF)</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+  }
+
+  .about-title h2 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    line-height: 1.2;
+  }
+
+  .about-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+    color: #4A3E39; /* Coklat sedikit lebih terang untuk body */
+  }
+
+  .action-buttons {
+    margin-top: 3rem;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .btn-outline, .btn-solid {
+    padding: 0.8rem 1.8rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+  }
+  .btn-outline:hover { background: var(--border-color); }
+
+  .btn-solid {
+    background: var(--accent-color);
+    color: #ffffff;
+    border: 1px solid var(--accent-color);
+  }
+  .btn-solid:hover { background: #9E5645; border-color: #9E5645; }
+
+  @media print {
+    .about { 
+      border-bottom: none; 
+      page-break-after: always; /* Setelah About, pindah ke halaman proyek */
+    }
+    .action-buttons { display: none; } /* Sembunyikan tombol saat di-print */
+  }
+</style>

@@ -1,11 +1,56 @@
 ---
-import Welcome from '../components/Welcome.astro';
+// src/pages/index.astro
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
-	<Welcome />
+  <Navbar />
+  
+  <Hero />
+  <About />
+
+  <section id="projects">
+    <!-- PROYEK 1: POESTAKAS -->
+    <ProjectCard 
+      number="1"
+      title="PoestaKas Frontend App"
+      context="SELF-INITIATED / INDIVIDUAL"
+      summary="A frontend web application developed with React, Mantine UI components, and React Router for streamlined business profile management and financial eligibility checks."
+      impacts={[
+        "Architected a clean navigation flow utilizing React Router for seamless single-page application experience.",
+        "Implemented a scalable component-based structure using Mantine UI for consistent visual design."
+      ]}
+      learnings={[
+        "Mastered state management and component routing in React.",
+        "Discovered how applying strict logical structure (similar to database design) drastically improves UI/UX maintainability."
+      ]}
+    >
+      <img src="/placeholder-poestakas.jpg" alt="PoestaKas Dashboard" style="width: 100%; display: block;" />
+    </ProjectCard>
+
+    <!-- PROYEK 2: Llama-3.3 XAI -->
+    <ProjectCard 
+      number="2"
+      title="Llama-3.3 XAI Faithfulness Evaluation"
+      context="ACADEMIC RESEARCH / INDIVIDUAL"
+      summary="An experimental research methodology evaluating the reasoning faithfulness of Llama-3.3-70B on informal Indonesian slang sentiment analysis using counterfactual interventions."
+      impacts={[
+        "Designed a rigorous testing environment using a manually filtered dataset of 145 Instagram comments.",
+        "Successfully mapped the model's prediction sensitivity and early answering probes capabilities."
+      ]}
+      learnings={[
+        "Deepened understanding of Explainable AI (XAI) and its critical role in model transparency.",
+        "Learned how to apply analytical problem-solving to evaluate black-box language models."
+      ]}
+    >
+      <img src="/placeholder-ai.jpg" alt="AI Experiment Diagram" style="width: 100%; display: block;" />
+    </ProjectCard>
+  </section>
+
+  <Footer />
 </Layout>
