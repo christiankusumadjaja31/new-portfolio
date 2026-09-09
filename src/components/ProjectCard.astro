@@ -1,6 +1,7 @@
 ---
 // src/components/ProjectCard.astro
 
+// Kita tambahkan Interface Props ini untuk TypeScript
 interface Props {
   number: string;
   title: string;
@@ -10,99 +11,143 @@ interface Props {
   learnings: string[];
 }
 
-const { number, title, context, summary, impacts, learnings } = Astro.props as Props;
+const { number, title, context, summary, impacts, learnings } = Astro.props;
 ---
 
-<article class="project-card container">
+<div class="project-card">
   <div class="project-header">
-    <h2>{number}. {title}</h2>
+    <div class="project-title-group">
+      <span class="project-number">{number}.</span>
+      <h2 class="project-title heading-font">{title}</h2>
+    </div>
     <span class="project-context">{context}</span>
   </div>
-  
+
   <p class="project-summary">{summary}</p>
-  
+
   <div class="project-details">
     <div class="detail-column">
-      <h3 class="heading-font">Impact</h3>
+      <h3 class="detail-heading heading-font">Impact</h3>
       <ul>
-        {impacts.map((impact) => <li>{impact}</li>)}
+        {impacts.map((impact) => (
+          <li>{impact}</li>
+        ))}
       </ul>
     </div>
     <div class="detail-column">
-      <h3 class="heading-font">Learnings</h3>
+      <h3 class="detail-heading heading-font">Learnings</h3>
       <ul>
-        {learnings.map((learning) => <li>{learning}</li>)}
+        {learnings.map((learning) => (
+          <li>{learning}</li>
+        ))}
       </ul>
     </div>
   </div>
-  
-  <div class="project-visual">
-    <slot /> 
+
+  <!-- Tempat di mana galeri gambar dari index.astro akan muncul -->
+  <div class="project-media">
+    <slot />
   </div>
-</article>
+</div>
 
 <style>
   .project-card {
-    padding-top: 5rem;
-    padding-bottom: 4rem;
+    /* KUNCI UTAMA: Menghapus background putih agar menyatu dengan kanvas */
+    background-color: transparent; 
+    border: none;
+    box-shadow: none;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color); /* Garis pemisah antar proyek */
+  }
+
+  .project-card:last-child {
+    border-bottom: none;
   }
 
   .project-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    border-bottom: 1px dashed var(--border-color);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-title-group {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+  }
+
+  .project-number {
+    font-size: 1.8rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--accent-color);
+  }
+
+  .project-title {
+    font-size: 2rem;
+    color: var(--text-color);
   }
 
   .project-context {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 600;
     letter-spacing: 0.05em;
     color: var(--accent-color);
-    font-weight: 600;
-    text-align: right;
+    text-transform: uppercase;
   }
 
   .project-summary {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
     font-style: italic;
-    font-size: 1.1rem;
-    margin-bottom: 2.5rem;
+    color: var(--text-color);
   }
 
   .project-details {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    margin-bottom: 3rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .detail-heading {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
   }
 
   .detail-column ul {
+    margin: 0;
     padding-left: 1.2rem;
-    margin-top: 0.5rem;
-  }
-  
-  .detail-column li { 
-    margin-bottom: 0.5rem; 
-    font-size: 0.95rem; 
   }
 
-  .project-visual {
+  .detail-column li {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .project-media {
     width: 100%;
-    background-color: #ebeae4;
-    border-radius: 4px;
-    overflow: hidden;
   }
 
+  /* Keajaiban Print ke PDF */
   @media print {
     .project-card {
-      padding-top: 2rem;
-      padding-bottom: 0;
+      padding: 1.5rem 0;
       page-break-inside: avoid;
-      break-after: page; 
     }
-    .project-visual {
-       max-height: 400px; 
+    
+    .project-title {
+      font-size: 1.6rem;
+    }
+    
+    .project-summary {
+      font-size: 1rem;
     }
   }
 </style>

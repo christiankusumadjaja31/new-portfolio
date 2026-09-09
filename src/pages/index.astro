@@ -14,43 +14,156 @@ import Footer from '../components/Footer.astro';
   <Hero />
   <About />
 
-  <section id="projects">
-    <!-- PROYEK 1: POESTAKAS -->
+  <section id="projects" class="container">
+    
+    <!-- PROYEK 1: WEBSITE DIREKTORI GEREJA -->
     <ProjectCard 
       number="1"
-      title="PoestaKas Frontend App"
-      context="SELF-INITIATED / INDIVIDUAL"
-      summary="A frontend web application developed with React, Mantine UI components, and React Router for streamlined business profile management and financial eligibility checks."
+      title="Church Directory Web Platform"
+      context="REAL-WORLD SOLUTION / FULL-STACK"
+      summary="A practical web-based directory designed and built to address real-world community management needs, streamlining access to essential organizational information."
       impacts={[
-        "Architected a clean navigation flow utilizing React Router for seamless single-page application experience.",
-        "Implemented a scalable component-based structure using Mantine UI for consistent visual design."
+        "Translated real-world operational bottlenecks into a structured digital solution.",
+        "Delivered an intuitive user interface tailored for non-technical end-users."
       ]}
       learnings={[
-        "Mastered state management and component routing in React.",
-        "Discovered how applying strict logical structure (similar to database design) drastically improves UI/UX maintainability."
+        "Learned how to align software architecture directly with community needs.",
+        "Refined skills in end-to-end web deployment and user-centric design."
+      ]}
+    >
+      <div class="project-gallery">
+        <img src="/direktori-1.png" alt="Church Directory 1" />
+        <img src="/direktori-2.png" alt="Church Directory 2" />
+        <img src="/direktori-3.png" alt="Church Directory 3" />
+        <img src="/direktori-4.png" alt="Church Directory 4" />
+        <img src="/direktori-5.png" alt="Church Directory 5" />
+      </div>
+    </ProjectCard>
+
+
+    <!-- PROYEK 2: FRONT-END TEAM (POESTAKAS) -->
+    <ProjectCard 
+      number="2"
+      title="PoestaKas Frontend Interface"
+      context="TEAM COLLABORATION / UI ENGINEERING"
+      summary="A collaborative frontend web application developed with React and Mantine UI, focusing on seamless business profile management and financial dashboard routing."
+      impacts={[
+        "Architected a clean navigation flow utilizing React Router for a seamless single-page application experience.",
+        "Ensured visual consistency and scalable component structures within a team environment."
+      ]}
+      learnings={[
+        "Mastered state management and component routing in modern frontend frameworks.",
+        "Discovered how applying strict logical structure drastically improves UI maintainability."
       ]}
     >
       <img src="/placeholder-poestakas.jpg" alt="PoestaKas Dashboard" style="width: 100%; display: block;" />
     </ProjectCard>
 
-    <!-- PROYEK 2: Llama-3.3 XAI -->
+
+    <!-- PROYEK 3: PENTAHO DATA PIPELINE -->
     <ProjectCard 
-      number="2"
-      title="Llama-3.3 XAI Faithfulness Evaluation"
-      context="ACADEMIC RESEARCH / INDIVIDUAL"
-      summary="An experimental research methodology evaluating the reasoning faithfulness of Llama-3.3-70B on informal Indonesian slang sentiment analysis using counterfactual interventions."
+      number="3"
+      title="Enterprise Data Integration Pipeline"
+      context="BACKEND LOGIC / DATA ENGINEERING"
+      summary="An ETL (Extract, Transform, Load) pipeline engineered using Pentaho to clean, transform, and integrate raw datasets into a structured database architecture."
       impacts={[
-        "Designed a rigorous testing environment using a manually filtered dataset of 145 Instagram comments.",
-        "Successfully mapped the model's prediction sensitivity and early answering probes capabilities."
+        "Successfully mapped and integrated disparate raw data sources into a unified star schema model.",
+        "Automated data transformation processes, reducing manual cleaning efforts."
       ]}
       learnings={[
-        "Deepened understanding of Explainable AI (XAI) and its critical role in model transparency.",
-        "Learned how to apply analytical problem-solving to evaluate black-box language models."
+        "Deepened understanding of database schema design and backend data integrity.",
+        "Learned to troubleshoot data bottlenecks and ensure structural reliability."
+      ]}
+    >
+      <img src="/placeholder-pentaho.jpg" alt="Pentaho ETL Pipeline" style="width: 100%; display: block;" />
+    </ProjectCard>
+
+
+    <!-- PROYEK 4: TABLEAU DATA VISUALIZATION -->
+    <ProjectCard 
+      number="4"
+      title="Maven Roasters Business Dashboard"
+      context="BUSINESS INTELLIGENCE / VISUALIZATION"
+      summary="An interactive Tableau dashboard designed to translate complex sales metrics and product mix data into an actionable visual narrative for stakeholders."
+      impacts={[
+        "Formulated a clear data storytelling structure around revenue growth trends and peak traffic hours.",
+        "Created an intuitive container layout that non-technical users can easily navigate."
+      ]}
+      learnings={[
+        "Learned to bridge the gap between raw backend data and frontend business strategy.",
+        "Mastered the art of presenting technical metrics as digestible visual insights."
+      ]}
+    >
+      <img src="/placeholder-tableau.jpg" alt="Tableau Dashboard" style="width: 100%; display: block;" />
+    </ProjectCard>
+
+
+    <!-- PROYEK 5: MODEL PREDIKSI ANALITIK -->
+    <ProjectCard 
+      number="5"
+      title="Analytical Prediction Model Evaluation"
+      context="RESEARCH / MACHINE LEARNING"
+      summary="An experimental research methodology evaluating the reasoning faithfulness and prediction sensitivity of an AI model on informal text datasets."
+      impacts={[
+        "Designed a rigorous testing environment using manually filtered datasets and counterfactual interventions.",
+        "Identified critical flaws and bias within the model's predictive capabilities."
+      ]}
+      learnings={[
+        "Gained invaluable insights into data leakage, overfitting, and the importance of critical model evaluation.",
+        "Learned that identifying a system's vulnerability is just as crucial as building it."
       ]}
     >
       <img src="/placeholder-ai.jpg" alt="AI Experiment Diagram" style="width: 100%; display: block;" />
     </ProjectCard>
+
   </section>
 
   <Footer />
 </Layout>
+
+<style>
+  /* --- STYLING UNTUK MULTI-IMAGE GALLERY (COMPACT GRID - NO CROP) --- */
+  .project-gallery {
+    display: grid;
+    /* Tetap menggunakan sistem 6 kolom */
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5rem; 
+    width: 100%;
+    margin-top: 1.5rem;
+    align-items: start; /* Memastikan gambar rata atas jika tingginya berbeda */
+  }
+
+  .project-gallery img {
+    width: 100%;
+    height: auto; /* KUNCI UTAMA: Membiarkan tinggi natural, TIDAK ADA CROP */
+    border-radius: 4px;
+    border: none;
+    background: transparent;
+    display: block; /* Menghilangkan spasi aneh di bawah gambar */
+  }
+
+  /* 2 Gambar Pertama: Masing-masing memakan 3 kolom (50% lebar) */
+  .project-gallery img:nth-child(1),
+  .project-gallery img:nth-child(2) {
+    grid-column: span 3;
+  }
+
+  /* 3 Gambar Terakhir: Masing-masing memakan 2 kolom (33.3% lebar) */
+  .project-gallery img:nth-child(3),
+  .project-gallery img:nth-child(4),
+  .project-gallery img:nth-child(5) {
+    grid-column: span 2;
+  }
+
+  /* --- FIX UNTUK PDF PRINT --- */
+  @media print {
+    .project-gallery {
+      gap: 0.3rem; 
+      page-break-inside: avoid; /* Menjaga galeri tidak terbelah beda halaman */
+    }
+    
+    .project-gallery img {
+      border: 1px solid #eeeeee; /* Garis tipis pembatas kertas */
+    }
+  }
+</style>
