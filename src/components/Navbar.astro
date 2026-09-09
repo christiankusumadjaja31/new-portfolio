@@ -2,77 +2,99 @@
 // src/components/Navbar.astro
 ---
 <nav class="navbar">
-  <div class="nav-container">
-    <div class="nav-group left">
-      <a href="#hero">Home</a>
-      <a href="#about">About</a>
+  <div class="nav-container container">
+    
+    <!-- 1. KIRI: About & Journey -->
+    <div class="nav-links left">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#journey" class="nav-link">Journey</a>
     </div>
     
-    <div class="logo heading-font">
-      <span class="logo-italic">Christian</span> Kusumadjaja
+    <!-- 2. TENGAH: Nama (Berfungsi sebagai Home) -->
+    <div class="nav-brand">
+      <a href="#" class="brand-name">Christian Kusumadjaja</a>
     </div>
     
-    <div class="nav-group right">
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+    <!-- 3. KANAN: Projects & Contact -->
+    <div class="nav-links right">
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </div>
+
   </div>
 </nav>
 
 <style>
   .navbar {
-    background-color: rgba(253, 251, 247, 0.95);
-    backdrop-filter: blur(5px);
+    width: 100%;
     border-bottom: 1px solid var(--border-color);
+    /* Sedikit transparansi agar tekstur kertas di belakangnya tetap terlihat */
+    background-color: rgba(247, 245, 240, 0.9); 
+    backdrop-filter: blur(4px); /* Efek blur halus jika di-scroll */
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
   }
-  
+
+  /* Menggunakan Grid 3 kolom agar nama SELALU presisi di tengah */
   .nav-container {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    max-width: 900px; /* Membatasi lebar agar keseluruhan menu lebih ke tengah */
-    margin: 0 auto;
-    padding: 1.2rem 2rem;
-  }
-  
-  .logo { 
-    font-size: 1.4rem; 
-    text-align: center;
-    letter-spacing: 0.02em;
+    height: 80px;
   }
 
-  /* Membuat nama depan italic dan berwarna terracotta agar unik */
-  .logo-italic {
-    font-style: italic;
-    color: darkgoldenrod;
-    font-weight: 600;
-  }
-  
-  .nav-group {
+  .nav-links {
     display: flex;
-    gap: 2.5rem; /* Jarak antar tombol menu */
+    gap: 3rem; /* Jarak antar menu */
+  }
+
+  /* Mendorong menu kiri ke arah tengah */
+  .nav-links.left {
+    justify-content: flex-end;
+    padding-right: 3rem;
+  }
+
+  /* Mendorong menu kanan ke arah tengah */
+  .nav-links.right {
+    justify-content: flex-start;
+    padding-left: 3rem;
   }
   
-  /* Mendorong menu agar merapat ke arah tengah (ke logo) */
-  .nav-group.left { justify-content: flex-end; padding-right: 3rem; }
-  .nav-group.right { justify-content: flex-start; padding-left: 3rem; }
+  .brand-name {
+    font-family: var(--font-heading); /* Menggunakan Playfair Display */
+    font-size: 1.7rem; 
+    color: var(--text-color); /* Mengembalikan ke warna gelap (Espresso). Jika ingin cokelat, ganti jadi var(--accent-color) */
+    text-decoration: none;
+    font-weight: 600;
+    font-style: italic; /* Menambahkan efek miring (italic) yang elegan */
+    transition: opacity 0.3s ease;
+    padding: 0;
+    margin: 0;
+  }
 
-  .nav-group a {
+  .brand-name:hover {
+    opacity: 0.7;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em; /* Spasi huruf dilebarkan agar elegan */
     text-decoration: none;
     color: var(--text-color);
-    font-size: 0.85rem;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
     transition: color 0.3s ease;
   }
 
-  .nav-group a:hover {
+  .nav-link:hover {
     color: var(--accent-color);
   }
 
-  @media print { .navbar { display: none !important; } }
+  /* Sembunyikan navigasi saat dicetak ke PDF (agar tidak nyangkut di kertas) */
+  @media print {
+    .navbar {
+      display: none;
+    }
+  }
 </style>

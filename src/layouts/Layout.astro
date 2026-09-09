@@ -13,10 +13,10 @@
     
     <style is:global>
       :root {
-        --bg-color: #F7F5F0; /* Creamy off-white */
-        --text-color: #2A2421; /* Espresso dark */
-        --accent-color: #694A38; /* Walnut brown */
-        --border-color: #D6D0C4; /* Soft greige */
+        --bg-color: #F7F5F0; 
+        --text-color: #2A2421; 
+        --accent-color: #694A38; 
+        --border-color: #D6D0C4; 
         --font-heading: 'Playfair Display', serif;
         --font-body: 'Manrope', sans-serif;
       }
@@ -34,10 +34,10 @@
         line-height: 1.6;
         margin: 0;
         padding: 0;
-        position: relative; /* Penting untuk efek noise layer */
+        position: relative; 
       }
 
-      /* --- EFEK KERTAS HALUS (NOISE GRAIN) --- */
+      /* Efek Tekstur Kertas */
       body::before {
         content: "";
         position: fixed;
@@ -65,10 +65,10 @@
         padding: 0 2rem;
       }
 
-      /* Keajaiban Print ke PDF */
+      /* SETTING CETAK PDF (A4 LANDSCAPE) */
       @media print {
-        /* MENGHILANGKAN URL DAN TANGGAL BAWAAN BROWSER */
         @page {
+          size: A4 landscape; /* Memaksa PDF menjadi Horizontal */
           margin: 1.2cm;
         }
         

@@ -10,17 +10,60 @@ import Footer from '../components/Footer.astro';
 
 <Layout>
   <Navbar />
-  
   <Hero />
   <About />
 
+  <!-- BAGIAN JOURNEY -->
+  <section id="journey" class="container">
+    <div class="section-header">
+      <h2 class="heading-font section-title">My Journey</h2>
+    </div>
+
+    <!-- BAB 1: PROGRAMMER -->
+    <div class="story-chapter">
+      <div class="story-media">
+        <div class="image-placeholder">
+          <span class="placeholder-text">Insert Journey Photo 1<br/>Size: 800 x 600 px (4:3)</span>
+        </div>
+      </div>
+      <div class="story-text">
+        <h3 class="heading-font">The Engineering Path</h3>
+        <p>
+          I started my journey fascinated by how data structures and algorithms could solve complex problems. From exploring the depths of Big Data architectures to dissecting Explainable AI models, my focus has always been on understanding the logic behind the curtain.
+        </p>
+        <p>
+          But writing code in isolation wasn't enough. I wanted to build systems that people could actually interact with, driving me to bridge the gap between heavy backend data and intuitive frontend experiences.
+        </p>
+      </div>
+    </div>
+
+    <!-- BAB 2: PAROKI -->
+    <div class="story-chapter reverse-layout">
+      <div class="story-text">
+        <h3 class="heading-font">Community & Leadership</h3>
+        <p>
+          Beyond the screen, I serve actively in the Youth Ministry (Seksi Kepemudaan Paroki). This is where I learned that the most complex systems aren't made of code, but of people. 
+        </p>
+        <p>
+          Organizing events, managing diverse team dynamics, and listening to the community's needs taught me invaluable lessons in empathy and leadership. It rewired my brain to approach technology not just as a tool for computation, but as a medium to empower communities and solve real human problems.
+        </p>
+      </div>
+      <div class="story-media">
+        <div class="image-placeholder">
+          <span class="placeholder-text">Insert Journey Photo 2<br/>Size: 800 x 600 px (4:3)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BAGIAN PROJECTS -->
   <section id="projects" class="container">
     
-    <!-- PROYEK 1: WEBSITE DIREKTORI GEREJA -->
     <ProjectCard 
       number="1"
       title="Church Directory Web Platform"
       context="REAL-WORLD SOLUTION / FULL-STACK"
+      repoUrl="https://github.com/your-username/church-directory"
       summary="A practical web-based directory designed and built to address real-world community management needs, streamlining access to essential organizational information."
       impacts={[
         "Translated real-world operational bottlenecks into a structured digital solution.",
@@ -31,21 +74,16 @@ import Footer from '../components/Footer.astro';
         "Refined skills in end-to-end web deployment and user-centric design."
       ]}
     >
-      <div class="project-gallery">
-        <img src="/direktori-1.png" alt="Church Directory 1" />
-        <img src="/direktori-2.png" alt="Church Directory 2" />
-        <img src="/direktori-3.png" alt="Church Directory 3" />
-        <img src="/direktori-4.png" alt="Church Directory 4" />
-        <img src="/direktori-5.png" alt="Church Directory 5" />
+      <div class="image-placeholder project-placeholder">
+        <span class="placeholder-text">Insert Project Image Here<br/>Size: 1200 x 675 px (16:9)</span>
       </div>
     </ProjectCard>
 
-
-    <!-- PROYEK 2: FRONT-END TEAM (POESTAKAS) -->
     <ProjectCard 
       number="2"
       title="PoestaKas Frontend Interface"
       context="TEAM COLLABORATION / UI ENGINEERING"
+      repoUrl="https://github.com/your-username/poestakas"
       summary="A collaborative frontend web application developed with React and Mantine UI, focusing on seamless business profile management and financial dashboard routing."
       impacts={[
         "Architected a clean navigation flow utilizing React Router for a seamless single-page application experience.",
@@ -56,15 +94,16 @@ import Footer from '../components/Footer.astro';
         "Discovered how applying strict logical structure drastically improves UI maintainability."
       ]}
     >
-      <img src="/placeholder-poestakas.jpg" alt="PoestaKas Dashboard" style="width: 100%; display: block;" />
+      <div class="image-placeholder project-placeholder">
+        <span class="placeholder-text">Insert Project Image Here<br/>Size: 1200 x 675 px (16:9)</span>
+      </div>
     </ProjectCard>
 
-
-    <!-- PROYEK 3: PENTAHO DATA PIPELINE -->
     <ProjectCard 
       number="3"
       title="Enterprise Data Integration Pipeline"
       context="BACKEND LOGIC / DATA ENGINEERING"
+      repoUrl="https://github.com/your-username/pentaho-pipeline"
       summary="An ETL (Extract, Transform, Load) pipeline engineered using Pentaho to clean, transform, and integrate raw datasets into a structured database architecture."
       impacts={[
         "Successfully mapped and integrated disparate raw data sources into a unified star schema model.",
@@ -75,15 +114,16 @@ import Footer from '../components/Footer.astro';
         "Learned to troubleshoot data bottlenecks and ensure structural reliability."
       ]}
     >
-      <img src="/placeholder-pentaho.jpg" alt="Pentaho ETL Pipeline" style="width: 100%; display: block;" />
+      <div class="image-placeholder project-placeholder">
+        <span class="placeholder-text">Insert Project Image Here<br/>Size: 1200 x 675 px (16:9)</span>
+      </div>
     </ProjectCard>
 
-
-    <!-- PROYEK 4: TABLEAU DATA VISUALIZATION -->
     <ProjectCard 
       number="4"
       title="Maven Roasters Business Dashboard"
       context="BUSINESS INTELLIGENCE / VISUALIZATION"
+      repoUrl="https://github.com/your-username/tableau-maven"
       summary="An interactive Tableau dashboard designed to translate complex sales metrics and product mix data into an actionable visual narrative for stakeholders."
       impacts={[
         "Formulated a clear data storytelling structure around revenue growth trends and peak traffic hours.",
@@ -94,15 +134,16 @@ import Footer from '../components/Footer.astro';
         "Mastered the art of presenting technical metrics as digestible visual insights."
       ]}
     >
-      <img src="/maven-dashboard.png" alt="Tableau Dashboard" style="width: 100%; display: block;" />
+      <div class="image-placeholder project-placeholder">
+        <span class="placeholder-text">Insert Project Image Here<br/>Size: 1200 x 675 px (16:9)</span>
+      </div>
     </ProjectCard>
 
-
-    <!-- PROYEK 5: MODEL PREDIKSI ANALITIK -->
     <ProjectCard 
       number="5"
       title="Analytical Prediction Model Evaluation"
       context="RESEARCH / MACHINE LEARNING"
+      repoUrl="https://github.com/your-username/xai-model-eval"
       summary="An experimental research methodology evaluating the reasoning faithfulness and prediction sensitivity of an AI model on informal text datasets."
       impacts={[
         "Designed a rigorous testing environment using manually filtered datasets and counterfactual interventions.",
@@ -113,8 +154,9 @@ import Footer from '../components/Footer.astro';
         "Learned that identifying a system's vulnerability is just as crucial as building it."
       ]}
     >
-      <img src="/streamlit-dashboard-1.png" alt="AI Experiment Diagram" style="width: 100%; display: block;" />
-	  <img src="/streamlit-dashboard-2.png" alt="AI Experiment Diagram" style="width: 100%; display: block;" />
+      <div class="image-placeholder project-placeholder">
+        <span class="placeholder-text">Insert Project Image Here<br/>Size: 1200 x 675 px (16:9)</span>
+      </div>
     </ProjectCard>
 
   </section>
@@ -123,48 +165,99 @@ import Footer from '../components/Footer.astro';
 </Layout>
 
 <style>
-  /* --- STYLING UNTUK MULTI-IMAGE GALLERY (COMPACT GRID - NO CROP) --- */
-  .project-gallery {
+  /* --- STYLING UNTUK EDITORIAL JOURNEY --- */
+  #journey {
+    margin-bottom: 6rem;
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 2.8rem;
+    color: var(--text-color);
+    margin: 0;
+  }
+
+  .story-chapter {
     display: grid;
-    /* Tetap menggunakan sistem 6 kolom */
-    grid-template-columns: repeat(6, 1fr);
-    gap: 0.5rem; 
-    width: 100%;
-    margin-top: 1.5rem;
-    align-items: start; /* Memastikan gambar rata atas jika tingginya berbeda */
+    grid-template-columns: 1fr 1fr; 
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 5rem;
   }
 
-  .project-gallery img {
+  .story-text h3 {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+  }
+
+  .story-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    color: var(--text-color);
+  }
+
+  /* --- EFEK DROP CAP UNTUK PARAGRAF PERTAMA DI JOURNEY --- */
+  .story-text p:first-of-type::first-letter {
+    font-family: var(--font-heading);
+    font-size: 4rem; /* Ukuran huruf raksasa */
+    font-weight: 600;
+    color: var(--accent-color);
+    float: left; /* Teks lain akan mengalir di sekitarnya */
+    line-height: 1;
+    padding-right: 0.5rem;
+    padding-top: 0.2rem;
+  }
+
+  /* --- STYLING UNTUK IMAGE PLACEHOLDER --- */
+  .image-placeholder {
     width: 100%;
-    height: auto; /* KUNCI UTAMA: Membiarkan tinggi natural, TIDAK ADA CROP */
+    aspect-ratio: 4 / 3; /* Default untuk Journey */
+    border: 1px dashed var(--accent-color); 
+    background-color: rgba(105, 74, 56, 0.05); 
     border-radius: 4px;
-    border: none;
-    background: transparent;
-    display: block; /* Menghilangkan spasi aneh di bawah gambar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
-  /* 2 Gambar Pertama: Masing-masing memakan 3 kolom (50% lebar) */
-  .project-gallery img:nth-child(1),
-  .project-gallery img:nth-child(2) {
-    grid-column: span 3;
+  .project-placeholder {
+    aspect-ratio: 16 / 9; /* Khusus untuk Project Landscape */
+    max-height: 400px; 
   }
 
-  /* 3 Gambar Terakhir: Masing-masing memakan 2 kolom (33.3% lebar) */
-  .project-gallery img:nth-child(3),
-  .project-gallery img:nth-child(4),
-  .project-gallery img:nth-child(5) {
-    grid-column: span 2;
+  .placeholder-text {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--accent-color);
+    letter-spacing: 0.05em;
+    opacity: 0.7;
   }
 
-  /* --- FIX UNTUK PDF PRINT --- */
+  /* --- FIX UNTUK CETAK PDF --- */
   @media print {
-    .project-gallery {
-      gap: 0.3rem; 
-      page-break-inside: avoid; /* Menjaga galeri tidak terbelah beda halaman */
+    #journey { margin-bottom: 3rem; }
+    
+    .story-chapter { 
+      gap: 2rem; 
+      margin-bottom: 3rem; 
+      page-break-inside: avoid;
     }
     
-    .project-gallery img {
-      border: 1px solid #eeeeee; /* Garis tipis pembatas kertas */
+    .story-text p { font-size: 1rem; }
+    
+    .image-placeholder {
+      background-color: #FDFDFB; 
+      border-color: #cccccc;
+      page-break-inside: avoid;
     }
   }
 </style>
