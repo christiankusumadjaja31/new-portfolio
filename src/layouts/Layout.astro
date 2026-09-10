@@ -37,7 +37,6 @@
         position: relative; 
       }
 
-      /* Efek Tekstur Kertas */
       body::before {
         content: "";
         position: fixed;
@@ -65,25 +64,15 @@
         padding: 0 2rem;
       }
 
-      /* SETTING CETAK PDF (A4 LANDSCAPE) */
       @media print {
         @page {
-          size: A4 landscape; /* Memaksa PDF menjadi Horizontal */
+          size: A4 landscape;
           margin: 1.2cm;
         }
         
-        body { 
-          background-color: #ffffff; 
-        }
-        
-        body::before { 
-          display: none; 
-        }
-        
-        .container { 
-          max-width: 100%; 
-          padding: 0; 
-        }
+        body { background-color: #ffffff; }
+        body::before { display: none; }
+        .container { max-width: 100%; padding: 0; }
       }
     </style>
   </head>

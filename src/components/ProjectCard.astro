@@ -14,7 +14,6 @@ const { number, title, context, summary, impacts, learnings, repoUrl } = Astro.p
 ---
 
 <div class="project-card">
-  <!-- HEADER -->
   <div class="project-header">
     <div class="project-title-group">
       <span class="project-number">{number}.</span>
@@ -23,15 +22,12 @@ const { number, title, context, summary, impacts, learnings, repoUrl } = Astro.p
     <span class="project-context">{context}</span>
   </div>
 
-  <!-- MEDIA / GAMBAR -->
   <div class="project-media">
     <slot />
   </div>
 
-  <!-- DESKRIPSI -->
   <p class="project-summary">{summary}</p>
 
-  <!-- IMPACT & LEARNINGS -->
   <div class="project-details">
     <div class="detail-column">
       <h3 class="detail-heading heading-font">Impact</h3>
@@ -47,7 +43,6 @@ const { number, title, context, summary, impacts, learnings, repoUrl } = Astro.p
     </div>
   </div>
 
-  <!-- FOOTER: REPOSITORY LINK -->
   {repoUrl && (
     <div class="project-footer">
       <a href={repoUrl} target="_blank" rel="noopener noreferrer" class="repo-link">
@@ -72,44 +67,19 @@ const { number, title, context, summary, impacts, learnings, repoUrl } = Astro.p
   .project-header {
     display: flex;
     justify-content: space-between;
-    align-items: baseline; /* Sejajar dengan teks bawah */
+    align-items: baseline; 
     flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 1.5rem; 
   }
 
-  .project-title-group {
-    display: flex;
-    align-items: baseline;
-    gap: 0.75rem;
-  }
-
-  .project-number {
-    font-size: 1.8rem;
-    font-family: var(--font-heading);
-    font-weight: 600;
-    color: var(--accent-color);
-  }
-
+  .project-title-group { display: flex; align-items: baseline; gap: 0.75rem; }
+  .project-number { font-size: 1.8rem; font-family: var(--font-heading); font-weight: 600; color: var(--accent-color); }
   .project-title { font-size: 2rem; color: var(--text-color); }
-
-  .project-context {
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    color: var(--text-color);
-    text-transform: uppercase;
-  }
+  .project-context { font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; color: var(--text-color); text-transform: uppercase; }
 
   .project-media { width: 100%; margin-bottom: 2rem; }
-
-  .project-summary {
-    font-size: 1.15rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    font-style: italic;
-    color: var(--text-color);
-  }
+  .project-summary { font-size: 1.15rem; line-height: 1.6; margin-bottom: 2rem; font-style: italic; color: var(--text-color); }
 
   .project-details {
     display: grid;
@@ -118,24 +88,16 @@ const { number, title, context, summary, impacts, learnings, repoUrl } = Astro.p
     margin-bottom: 1rem;
   }
 
-  .detail-heading {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    color: var(--text-color);
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 0.5rem;
-  }
-
+  .detail-heading { font-size: 1.3rem; margin-bottom: 1rem; color: var(--text-color); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; }
   .detail-column ul { margin: 0; padding-left: 1.2rem; }
   .detail-column li { margin-bottom: 0.75rem; font-size: 0.95rem; }
 
-  /* GAYA BARU UNTUK LINK GITHUB (FOOTNOTE) */
   .project-footer {
     margin-top: 2rem;
     padding-top: 1.5rem;
     border-top: 1px dashed var(--border-color);
     display: flex;
-    justify-content: flex-end; /* Memojokkan link ke kanan */
+    justify-content: flex-end; 
   }
 
   .repo-link {
@@ -155,6 +117,6 @@ const { number, title, context, summary, impacts, learnings, repoUrl } = Astro.p
 
   @media print {
     .project-card { padding: 1rem 0; page-break-inside: avoid; }
-    .project-footer { display: none; } /* Opsional: hilangkan link Github saat diprint */
+    .project-footer { display: none; } 
   }
 </style>

@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
 import About from '../components/About.astro';
 import ProjectCard from '../components/ProjectCard.astro';
-import Footer from '../components/Footer.astro';
+import Footer from '../components/Footer.astro'; // Pastikan komponen ini ada
 ---
 
 <Layout>
@@ -13,17 +13,17 @@ import Footer from '../components/Footer.astro';
   <Hero />
   <About />
 
-  <!-- --- BAGIAN JOURNEY --- -->
   <section id="journey" class="container">
     <div class="section-header">
       <h2 class="heading-font section-title">My Journey</h2>
     </div>
 
-    <!-- BAB 1: PROGRAMMER (Gambar Kiri, Teks Kanan) -->
+    <!-- BAB 1 -->
     <div class="story-chapter">
       <div class="story-media">
-        <div class="image-placeholder">
-          <span class="placeholder-text">Insert Photo: Academic/Tech Event<br/>Size: 800 x 600 px (4:3)</span>
+        <!-- Bingkai tebal diterapkan -->
+        <div class="custom-frame landscape-frame">
+          <img src="/the-engineering-path.png" alt="Kegiatan Kampus" style="width: 100%; height: 100%; object-fit: cover;" />
         </div>
       </div>
       <div class="story-text">
@@ -37,7 +37,7 @@ import Footer from '../components/Footer.astro';
       </div>
     </div>
 
-    <!-- BAB 2: PAROKI (Teks Kiri, Gambar Kanan) -->
+    <!-- BAB 2 -->
     <div class="story-chapter reverse-layout">
       <div class="story-text">
         <h3 class="heading-font">Growing Through Community</h3>
@@ -49,13 +49,14 @@ import Footer from '../components/Footer.astro';
         </p>
       </div>
       <div class="story-media">
-        <div class="image-placeholder">
-          <span class="placeholder-text">Insert Photo: Parish/Youth Ministry<br/>Size: 800 x 600 px (4:3)</span>
+        <!-- Bingkai tebal diterapkan -->
+        <div class="custom-frame landscape-frame">
+          <img src="/community-pic.png" alt="Kegiatan Kampus" style="width: 100%; height: 100%; object-fit: cover;" />
         </div>
       </div>
     </div>
 
-    <!-- BAB 3: SINTESIS (Tengah, Jembatan menuju Proyek) -->
+    <!-- BAB 3 -->
     <div class="story-bridge">
       <h3 class="heading-font">Where Both Worlds Meet</h3>
       <p>
@@ -67,7 +68,6 @@ import Footer from '../components/Footer.astro';
     </div>
   </section>
 
-  <!-- BAGIAN PROJECTS -->
   <section id="projects" class="container">
     
     <ProjectCard 
@@ -85,7 +85,8 @@ import Footer from '../components/Footer.astro';
         "Refined skills in end-to-end web deployment and user-centric design."
       ]}
     >
-      <div class="image-placeholder project-placeholder">
+      <!-- HANYA MENGGUNAKAN KOTAK PUTUS-PUTUS SEDERHANA DI SINI -->
+      <div class="project-placeholder">
         <span class="placeholder-text">Insert Project Image Here<br/>Size: 1200 x 675 px (16:9)</span>
       </div>
     </ProjectCard>
@@ -105,7 +106,7 @@ import Footer from '../components/Footer.astro';
         "Discovered how applying strict logical structure drastically improves UI maintainability."
       ]}
     >
-      <div class="image-placeholder project-placeholder">
+      <div class="project-placeholder">
         <span class="placeholder-text">Insert Project Image Here<br/>Size: 1200 x 675 px (16:9)</span>
       </div>
     </ProjectCard>
@@ -125,7 +126,7 @@ import Footer from '../components/Footer.astro';
         "Learned to troubleshoot data bottlenecks and ensure structural reliability."
       ]}
     >
-      <div class="image-placeholder project-placeholder">
+      <div class="project-placeholder">
         <span class="placeholder-text">Insert Project Image Here<br/>Size: 1200 x 675 px (16:9)</span>
       </div>
     </ProjectCard>
@@ -145,7 +146,7 @@ import Footer from '../components/Footer.astro';
         "Mastered the art of presenting technical metrics as digestible visual insights."
       ]}
     >
-      <div class="image-placeholder project-placeholder">
+      <div class="project-placeholder">
         <span class="placeholder-text">Insert Project Image Here<br/>Size: 1200 x 675 px (16:9)</span>
       </div>
     </ProjectCard>
@@ -165,7 +166,7 @@ import Footer from '../components/Footer.astro';
         "Learned that identifying a system's vulnerability is just as crucial as building it."
       ]}
     >
-      <div class="image-placeholder project-placeholder">
+      <div class="project-placeholder">
         <span class="placeholder-text">Insert Project Image Here<br/>Size: 1200 x 675 px (16:9)</span>
       </div>
     </ProjectCard>
@@ -176,101 +177,59 @@ import Footer from '../components/Footer.astro';
 </Layout>
 
 <style>
-  /* --- STYLING UNTUK EDITORIAL JOURNEY --- */
-  #journey {
-    margin-bottom: 6rem;
-  }
+  #journey { margin-bottom: 6rem; }
 
-  .section-header {
-    margin-bottom: 3rem;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 1rem;
-    text-align: center;
-  }
+  .section-header { margin-bottom: 3rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; text-align: center; }
+  .section-title { font-size: 2.8rem; color: var(--text-color); margin: 0; }
 
-  .section-title {
-    font-size: 2.8rem;
-    color: var(--text-color);
-    margin: 0;
-  }
+  .story-chapter { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 5rem; }
+  .story-text h3 { font-size: 2rem; color: var(--accent-color); margin-bottom: 1.5rem; }
+  .story-text p { font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.2rem; color: var(--text-color); }
 
-  .story-chapter {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 4rem;
-    align-items: center;
-    margin-bottom: 5rem;
-  }
-
-  .story-text h3 {
-    font-size: 2rem;
-    color: var(--accent-color);
-    margin-bottom: 1.5rem;
-  }
-
-  .story-text p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 1.2rem;
-    color: var(--text-color);
-  }
-
-  /* --- EFEK DROP CAP UNTUK PARAGRAF PERTAMA DI JOURNEY --- */
+  /* DROP CAP EFFECT */
   .story-text p:first-of-type::first-letter {
     font-family: var(--font-heading);
-    font-size: 4rem; /* Ukuran huruf raksasa */
+    font-size: 4rem; 
     font-weight: 600;
     color: var(--accent-color);
-    float: left; /* Teks lain akan mengalir di sekitarnya */
+    float: left; 
     line-height: 1;
     padding-right: 0.5rem;
     padding-top: 0.2rem;
   }
 
-  /* --- STYLING UNTUK STORY BRIDGE (BAB 3) --- */
   .story-bridge {
     max-width: 800px;
     margin: 6rem auto 4rem auto;
     text-align: center;
     padding: 3rem;
-    background-color: rgba(105, 74, 56, 0.03); /* Latar belakang sangat halus */
+    background-color: rgba(105, 74, 56, 0.03); 
     border: 1px solid var(--border-color);
     border-radius: 4px;
   }
 
-  .story-bridge h3 {
-    font-size: 2.2rem;
-    color: var(--accent-color);
-    margin-bottom: 1.5rem;
+  .story-bridge h3 { font-size: 2.2rem; color: var(--accent-color); margin-bottom: 1.5rem; }
+  .story-bridge p { font-size: 1.15rem; line-height: 1.8; color: var(--text-color); margin-bottom: 1.5rem; }
+  .story-bridge .highlight-text { font-family: var(--font-heading); font-size: 1.4rem; font-style: italic; color: var(--accent-color); margin-top: 2rem; }
+
+  /* BINGKAI TEBAL COKELAT & PUTIH (KHUSUS JOURNEY) */
+  .custom-frame {
+    background-color: #FFFFFF; 
+    border: 12px solid var(--accent-color); 
+    padding: 1rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
   }
 
-  .story-bridge p {
-    font-size: 1.15rem;
-    line-height: 1.8;
-    color: var(--text-color);
-    margin-bottom: 1.5rem;
-  }
+  .landscape-frame { width: 100%; aspect-ratio: 4 / 3; }
 
-  .story-bridge .highlight-text {
-    font-family: var(--font-heading);
-    font-size: 1.4rem;
-    font-style: italic;
-    color: var(--accent-color);
-    margin-top: 2rem;
-  }
-
-  @media print {
-    .story-bridge {
-      margin: 3rem auto;
-      padding: 1.5rem;
-      page-break-inside: avoid;
-    }
-  }
-
-  /* --- STYLING UNTUK IMAGE PLACEHOLDER --- */
-  .image-placeholder {
-    width: 100%;
-    aspect-ratio: 4 / 3; /* Default untuk Journey */
+  /* GAYA SEDERHANA KHUSUS PROJECT (Tanpa Bingkai Tebal) */
+  .project-placeholder { 
+    width: 100%; 
+    aspect-ratio: 16 / 9; 
+    max-height: 400px; 
     border: 1px dashed var(--accent-color); 
     background-color: rgba(105, 74, 56, 0.05); 
     border-radius: 4px;
@@ -280,32 +239,26 @@ import Footer from '../components/Footer.astro';
     text-align: center;
   }
 
-  .project-placeholder {
-    aspect-ratio: 16 / 9; /* Khusus untuk Project Landscape */
-    max-height: 400px; 
+  .placeholder-text { 
+    font-family: var(--font-body); 
+    font-size: 1rem; 
+    color: var(--accent-color); 
+    letter-spacing: 0.05em; 
+    opacity: 0.7; 
   }
 
-  .placeholder-text {
-    font-family: var(--font-body);
-    font-size: 1rem;
-    color: var(--accent-color);
-    letter-spacing: 0.05em;
-    opacity: 0.7;
-  }
-
-  /* --- FIX UNTUK CETAK PDF --- */
   @media print {
     #journey { margin-bottom: 3rem; }
-    
-    .story-chapter { 
-      gap: 2rem; 
-      margin-bottom: 3rem; 
-      page-break-inside: avoid;
-    }
-    
+    .story-chapter { gap: 2rem; margin-bottom: 3rem; page-break-inside: avoid; }
     .story-text p { font-size: 1rem; }
+    .story-bridge { margin: 3rem auto; padding: 1.5rem; page-break-inside: avoid; }
     
-    .image-placeholder {
+    .custom-frame { 
+      border-width: 6px; 
+      padding: 0.75rem;
+      page-break-inside: avoid; 
+    }
+    .project-placeholder {
       background-color: #FDFDFB; 
       border-color: #cccccc;
       page-break-inside: avoid;

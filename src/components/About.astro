@@ -1,85 +1,66 @@
 ---
 // src/components/About.astro
 ---
-<section id="about" class="about container">
+<section id="about" class="container">
   <div class="about-grid">
-    <div class="about-title">
-      <h2 class="heading-font">Hi There!<br/>Pleasure to Meet You!</h2>
-    </div>
     
-    <div class="about-content">
-      <p>My journey into technology is deeply rooted in my experience teaching mathematics to high school students. Breaking down complex concepts like logarithms and trigonometry into simple, digestible logic taught me a foundational problem-solving mindset.</p>
-      <p>I bring this exact interdisciplinary approach into my tech stack. Whether I am architecting robust backend databases, evaluating the faithfulness of XAI models, or crafting intuitive frontend interfaces, my goal remains the same: transforming complex architectures into clear, elegant solutions.</p>
-      
-      <div class="action-buttons">
-        <a href="/CV_Christian_Kusumadjaja.pdf" download class="btn-outline">Download CV</a>
-        <button onclick="window.print()" class="btn-solid">Download Portfolio (PDF)</button>
-      </div>
+    <div class="about-statement">
+      <h2 class="heading-font">Demystifying Complexity.</h2>
+      <p class="subtitle">My core motivation is translating intricate systems into human-centric solutions.</p>
     </div>
+
+    <div class="about-details">
+      <p>
+        I am a Computer Science undergraduate specializing in Database Technology. I find my greatest joy at the intersection of logic and human understanding. 
+      </p>
+      <p>
+        Whether I am working as a private mathematics tutor—breaking down complex abstract concepts into digestible, step-by-step methodologies for my students—or engineering a backend data pipeline, my philosophy remains the same: <strong>technology should bring clarity, not confusion.</strong>
+      </p>
+      <p>
+        My current interest lies in deeply understanding Explainable AI (XAI) and scalable data architectures. I am driven by the desire to step out of the conventional classroom environment and collaborate with diverse minds to build products that are not only technically robust, but fundamentally empathetic to the user's needs.
+      </p>
+    </div>
+
   </div>
 </section>
 
 <style>
-  .about {
-    padding-top: 2rem;
+  #about {
+    padding-top: 4rem;
     padding-bottom: 6rem;
     border-bottom: 1px solid var(--border-color);
+    margin-bottom: 5rem;
   }
 
   .about-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1.2fr; 
     gap: 4rem;
+    align-items: start;
   }
 
-  .about-title h2 {
-    font-size: 2.5rem;
+  .about-statement h2 {
+    font-size: 4rem;
+    line-height: 1.1;
     color: var(--accent-color);
-    line-height: 1.2;
+    margin-bottom: 1rem;
   }
 
-  .about-content p {
-    margin-bottom: 1.5rem;
-    font-size: 1.05rem;
-    color: #4A3E39; /* Coklat sedikit lebih terang untuk body */
-  }
-
-  .action-buttons {
-    margin-top: 3rem;
-    display: flex;
-    gap: 1.5rem;
-  }
-
-  .btn-outline, .btn-solid {
-    padding: 0.8rem 1.8rem;
-    font-family: var(--font-body);
-    font-size: 0.95rem;
-    font-weight: 600;
-    border-radius: 4px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-
-  .btn-outline {
-    background: transparent;
+  .about-statement .subtitle {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-style: italic;
     color: var(--text-color);
-    border: 1px solid var(--text-color);
+    opacity: 0.8;
   }
-  .btn-outline:hover { background: var(--border-color); }
 
-  .btn-solid {
-    background: var(--accent-color);
-    color: #ffffff;
-    border: 1px solid var(--accent-color);
-  }
-  .btn-solid:hover { background: #9E5645; border-color: #9E5645; }
+  .about-details { padding-top: 1rem; }
+  .about-details p { font-size: 1.15rem; line-height: 1.8; color: var(--text-color); margin-bottom: 1.5rem; }
+  .about-details strong { font-weight: 600; color: var(--accent-color); }
 
   @media print {
-    .about { 
-      border-bottom: none; 
-      page-break-after: always; /* Setelah About, pindah ke halaman proyek */
-    }
-    .action-buttons { display: none; } /* Sembunyikan tombol saat di-print */
+    #about { padding-top: 2rem; padding-bottom: 3rem; margin-bottom: 3rem; page-break-inside: avoid; }
+    .about-statement h2 { font-size: 3rem; }
+    .about-details p { font-size: 1.05rem; }
   }
 </style>
