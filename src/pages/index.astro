@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
 import About from '../components/About.astro';
 import ProjectCard from '../components/ProjectCard.astro';
-import Footer from '../components/Footer.astro'; // Pastikan komponen ini ada
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
@@ -13,6 +13,7 @@ import Footer from '../components/Footer.astro'; // Pastikan komponen ini ada
   <Hero />
   <About />
 
+  <!-- BAGIAN JOURNEY -->
   <section id="journey" class="container">
     <div class="section-header">
       <h2 class="heading-font section-title">My Journey</h2>
@@ -21,9 +22,9 @@ import Footer from '../components/Footer.astro'; // Pastikan komponen ini ada
     <!-- BAB 1 -->
     <div class="story-chapter">
       <div class="story-media">
-        <!-- Bingkai tebal diterapkan -->
         <div class="custom-frame landscape-frame">
-          <img src="/the-engineering-path.png" alt="Kegiatan Kampus" style="width: 100%; height: 100%; object-fit: cover;" />
+          <!-- Ganti dengan fotomu -->
+          <img src="/foto-kampus.jpg" alt="Academic Event" class="story-img" />
         </div>
       </div>
       <div class="story-text">
@@ -49,9 +50,9 @@ import Footer from '../components/Footer.astro'; // Pastikan komponen ini ada
         </p>
       </div>
       <div class="story-media">
-        <!-- Bingkai tebal diterapkan -->
         <div class="custom-frame landscape-frame">
-          <img src="/community-pic.png" alt="Kegiatan Kampus" style="width: 100%; height: 100%; object-fit: cover;" />
+          <!-- Ganti dengan fotomu -->
+          <img src="/foto-paroki.jpg" alt="Parish Ministry" class="story-img" />
         </div>
       </div>
     </div>
@@ -68,106 +69,116 @@ import Footer from '../components/Footer.astro'; // Pastikan komponen ini ada
     </div>
   </section>
 
+  <!-- BAGIAN PROYEK -->
   <section id="projects" class="container">
     
+    <!-- PROJECT 1: 5 GAMBAR (WEB BROWSER STYLE) -->
     <ProjectCard 
       number="1"
       title="Church Directory Web Platform"
       context="REAL-WORLD SOLUTION / FULL-STACK"
       repoUrl="https://github.com/your-username/church-directory"
       summary="A practical web-based directory designed and built to address real-world community management needs, streamlining access to essential organizational information."
-      impacts={[
-        "Translated real-world operational bottlenecks into a structured digital solution.",
-        "Delivered an intuitive user interface tailored for non-technical end-users."
-      ]}
-      learnings={[
-        "Learned how to align software architecture directly with community needs.",
-        "Refined skills in end-to-end web deployment and user-centric design."
-      ]}
+      impacts={["Translated real-world operational bottlenecks into a structured digital solution.", "Delivered an intuitive user interface tailored for non-technical end-users."]}
+      learnings={["Learned how to align software architecture directly with community needs.", "Refined skills in end-to-end web deployment and user-centric design."]}
     >
-      <!-- HANYA MENGGUNAKAN KOTAK PUTUS-PUTUS SEDERHANA DI SINI -->
-      <div class="project-placeholder">
-        <span class="placeholder-text">Insert Project Image Here<br/>Size: 1200 x 675 px (16:9)</span>
+      <div class="gallery-slot browser-style">
+        <div class="browser-header">
+          <span class="browser-dot dot-red"></span><span class="browser-dot dot-yellow"></span><span class="browser-dot dot-green"></span>
+        </div>
+        <!-- Grid 5 (1 Kiri Besar, 4 Kanan Kecil) -->
+        <div class="grid-content grid-5">
+          <div class="main-img"><img src="/p1-gambar1.jpg" alt="Main UI" /></div>
+          <div class="side-imgs">
+            <img src="/p1-gambar2.jpg" alt="Feature 1" />
+            <img src="/p1-gambar3.jpg" alt="Feature 2" />
+            <img src="/p1-gambar4.jpg" alt="Feature 3" />
+            <img src="/p1-gambar5.jpg" alt="Feature 4" />
+          </div>
+        </div>
       </div>
     </ProjectCard>
 
+    <!-- PROJECT 2: 2 GAMBAR (WEB BROWSER STYLE) -->
     <ProjectCard 
       number="2"
       title="PoestaKas Frontend Interface"
       context="TEAM COLLABORATION / UI ENGINEERING"
       repoUrl="https://github.com/your-username/poestakas"
       summary="A collaborative frontend web application developed with React and Mantine UI, focusing on seamless business profile management and financial dashboard routing."
-      impacts={[
-        "Architected a clean navigation flow utilizing React Router for a seamless single-page application experience.",
-        "Ensured visual consistency and scalable component structures within a team environment."
-      ]}
-      learnings={[
-        "Mastered state management and component routing in modern frontend frameworks.",
-        "Discovered how applying strict logical structure drastically improves UI maintainability."
-      ]}
+      impacts={["Architected a clean navigation flow utilizing React Router for a seamless single-page application experience.", "Ensured visual consistency and scalable component structures within a team environment."]}
+      learnings={["Mastered state management and component routing in modern frontend frameworks.", "Discovered how applying strict logical structure drastically improves UI maintainability."]}
     >
-      <div class="project-placeholder">
-        <span class="placeholder-text">Insert Project Image Here<br/>Size: 1200 x 675 px (16:9)</span>
+      <div class="gallery-slot browser-style">
+        <div class="browser-header">
+          <span class="browser-dot dot-red"></span><span class="browser-dot dot-yellow"></span><span class="browser-dot dot-green"></span>
+        </div>
+        <!-- Grid 2 (Dibelah 50:50) -->
+        <div class="grid-content grid-2">
+          <img src="/p2-gambar1.jpg" alt="Poesta UI 1" />
+          <img src="/p2-gambar2.jpg" alt="Poesta UI 2" />
+        </div>
       </div>
     </ProjectCard>
 
+    <!-- PROJECT 3: 5 GAMBAR (CLEAN DATA STYLE) -->
     <ProjectCard 
       number="3"
       title="Enterprise Data Integration Pipeline"
       context="BACKEND LOGIC / DATA ENGINEERING"
       repoUrl="https://github.com/your-username/pentaho-pipeline"
       summary="An ETL (Extract, Transform, Load) pipeline engineered using Pentaho to clean, transform, and integrate raw datasets into a structured database architecture."
-      impacts={[
-        "Successfully mapped and integrated disparate raw data sources into a unified star schema model.",
-        "Automated data transformation processes, reducing manual cleaning efforts."
-      ]}
-      learnings={[
-        "Deepened understanding of database schema design and backend data integrity.",
-        "Learned to troubleshoot data bottlenecks and ensure structural reliability."
-      ]}
+      impacts={["Successfully mapped and integrated disparate raw data sources into a unified star schema model.", "Automated data transformation processes, reducing manual cleaning efforts."]}
+      learnings={["Deepened understanding of database schema design and backend data integrity.", "Learned to troubleshoot data bottlenecks and ensure structural reliability."]}
     >
-      <div class="project-placeholder">
-        <span class="placeholder-text">Insert Project Image Here<br/>Size: 1200 x 675 px (16:9)</span>
+      <div class="gallery-slot clean-style">
+        <!-- Grid 5 (1 Kiri Besar, 4 Kanan Kecil) Tanpa Header Browser -->
+        <div class="grid-content grid-5">
+          <div class="main-img"><img src="/p3-gambar1.jpg" alt="Pipeline Diagram" /></div>
+          <div class="side-imgs">
+            <img src="/p3-gambar2.jpg" alt="Data 1" />
+            <img src="/p3-gambar3.jpg" alt="Data 2" />
+            <img src="/p3-gambar4.jpg" alt="Data 3" />
+            <img src="/p3-gambar5.jpg" alt="Data 4" />
+          </div>
+        </div>
       </div>
     </ProjectCard>
 
+    <!-- PROJECT 4: 1 GAMBAR (CLEAN DATA STYLE) -->
     <ProjectCard 
       number="4"
       title="Maven Roasters Business Dashboard"
       context="BUSINESS INTELLIGENCE / VISUALIZATION"
       repoUrl="https://github.com/your-username/tableau-maven"
       summary="An interactive Tableau dashboard designed to translate complex sales metrics and product mix data into an actionable visual narrative for stakeholders."
-      impacts={[
-        "Formulated a clear data storytelling structure around revenue growth trends and peak traffic hours.",
-        "Created an intuitive container layout that non-technical users can easily navigate."
-      ]}
-      learnings={[
-        "Learned to bridge the gap between raw backend data and frontend business strategy.",
-        "Mastered the art of presenting technical metrics as digestible visual insights."
-      ]}
+      impacts={["Formulated a clear data storytelling structure around revenue growth trends and peak traffic hours.", "Created an intuitive container layout that non-technical users can easily navigate."]}
+      learnings={["Learned to bridge the gap between raw backend data and frontend business strategy.", "Mastered the art of presenting technical metrics as digestible visual insights."]}
     >
-      <div class="project-placeholder">
-        <span class="placeholder-text">Insert Project Image Here<br/>Size: 1200 x 675 px (16:9)</span>
+      <div class="gallery-slot clean-style">
+        <!-- Grid 1 (Penuh 100%) -->
+        <div class="grid-content grid-1">
+          <img src="/p4-gambar1.jpg" alt="Tableau Dashboard" />
+        </div>
       </div>
     </ProjectCard>
 
+    <!-- PROJECT 5: 2 GAMBAR (CLEAN DATA STYLE) -->
     <ProjectCard 
       number="5"
       title="Analytical Prediction Model Evaluation"
       context="RESEARCH / MACHINE LEARNING"
       repoUrl="https://github.com/your-username/xai-model-eval"
       summary="An experimental research methodology evaluating the reasoning faithfulness and prediction sensitivity of an AI model on informal text datasets."
-      impacts={[
-        "Designed a rigorous testing environment using manually filtered datasets and counterfactual interventions.",
-        "Identified critical flaws and bias within the model's predictive capabilities."
-      ]}
-      learnings={[
-        "Gained invaluable insights into data leakage, overfitting, and the importance of critical model evaluation.",
-        "Learned that identifying a system's vulnerability is just as crucial as building it."
-      ]}
+      impacts={["Designed a rigorous testing environment using manually filtered datasets and counterfactual interventions.", "Identified critical flaws and bias within the model's predictive capabilities."]}
+      learnings={["Gained invaluable insights into data leakage, overfitting, and the importance of critical model evaluation.", "Learned that identifying a system's vulnerability is just as crucial as building it."]}
     >
-      <div class="project-placeholder">
-        <span class="placeholder-text">Insert Project Image Here<br/>Size: 1200 x 675 px (16:9)</span>
+      <div class="gallery-slot clean-style">
+        <!-- Grid 2 (Dibelah 50:50) -->
+        <div class="grid-content grid-2">
+          <img src="/p5-gambar1.jpg" alt="ML Graph 1" />
+          <img src="/p5-gambar2.jpg" alt="ML Graph 2" />
+        </div>
       </div>
     </ProjectCard>
 
@@ -177,91 +188,101 @@ import Footer from '../components/Footer.astro'; // Pastikan komponen ini ada
 </Layout>
 
 <style>
+  /* --- GAYA UNTUK JOURNEY --- */
   #journey { margin-bottom: 6rem; }
-
   .section-header { margin-bottom: 3rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; text-align: center; }
   .section-title { font-size: 2.8rem; color: var(--text-color); margin: 0; }
-
   .story-chapter { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 5rem; }
   .story-text h3 { font-size: 2rem; color: var(--accent-color); margin-bottom: 1.5rem; }
   .story-text p { font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.2rem; color: var(--text-color); }
-
-  /* DROP CAP EFFECT */
-  .story-text p:first-of-type::first-letter {
-    font-family: var(--font-heading);
-    font-size: 4rem; 
-    font-weight: 600;
-    color: var(--accent-color);
-    float: left; 
-    line-height: 1;
-    padding-right: 0.5rem;
-    padding-top: 0.2rem;
-  }
-
-  .story-bridge {
-    max-width: 800px;
-    margin: 6rem auto 4rem auto;
-    text-align: center;
-    padding: 3rem;
-    background-color: rgba(105, 74, 56, 0.03); 
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-  }
-
+  .story-text p:first-of-type::first-letter { font-family: var(--font-heading); font-size: 4rem; font-weight: 600; color: var(--accent-color); float: left; line-height: 1; padding-right: 0.5rem; padding-top: 0.2rem; }
+  .story-bridge { max-width: 800px; margin: 6rem auto 4rem auto; text-align: center; padding: 3rem; background-color: rgba(105, 74, 56, 0.03); border: 1px solid var(--border-color); border-radius: 4px; }
   .story-bridge h3 { font-size: 2.2rem; color: var(--accent-color); margin-bottom: 1.5rem; }
   .story-bridge p { font-size: 1.15rem; line-height: 1.8; color: var(--text-color); margin-bottom: 1.5rem; }
   .story-bridge .highlight-text { font-family: var(--font-heading); font-size: 1.4rem; font-style: italic; color: var(--accent-color); margin-top: 2rem; }
 
   /* BINGKAI TEBAL COKELAT & PUTIH (KHUSUS JOURNEY) */
-  .custom-frame {
-    background-color: #FFFFFF; 
-    border: 12px solid var(--accent-color); 
-    padding: 1rem; 
+  .custom-frame { background-color: #FFFFFF; border: 12px solid var(--accent-color); padding: 1rem; display: flex; justify-content: center; align-items: center; overflow: hidden; }
+  .landscape-frame { width: 100%; aspect-ratio: 4 / 3; }
+  .story-img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* --- SISTEM SLOT GAMBAR PROJECT (TIDAK AKAN BOCOR/MELEBIHI UKURAN) --- */
+  .gallery-slot {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Mengunci rasio memanjang */
+    max-height: 400px; /* Batas tinggi maksimal saat diprint */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  /* WRAPPER STYLE (Pilih Browser atau Clean) */
+  .browser-style {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Bayangan tipis */
+  }
+
+  .clean-style {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 0.5rem;
+    background-color: rgba(105, 74, 56, 0.02);
+  }
+
+  /* HEADER MAC BROWSER */
+  .browser-header {
+    height: 28px;
+    background-color: #F5F5F7;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
     align-items: center;
+    padding: 0 12px;
+    gap: 6px;
+    flex-shrink: 0; /* Header tidak boleh menyusut */
+  }
+  .browser-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot-red { background-color: #FF5F56; }
+  .dot-yellow { background-color: #FFBD2E; }
+  .dot-green { background-color: #27C93F; }
+
+  /* MENGUNCI ISI GRID DI DALAM SLOT */
+  .grid-content {
+    width: 100%;
+    flex-grow: 1; /* Sisa tinggi slot digunakan oleh gambar sepenuhnya */
     overflow: hidden;
   }
 
-  .landscape-frame { width: 100%; aspect-ratio: 4 / 3; }
+  /* LAYOUT GRID 1 GAMBAR */
+  .grid-1 { width: 100%; height: 100%; }
+  .grid-1 img { width: 100%; height: 100%; object-fit: cover; }
 
-  /* GAYA SEDERHANA KHUSUS PROJECT (Tanpa Bingkai Tebal) */
-  .project-placeholder { 
-    width: 100%; 
-    aspect-ratio: 16 / 9; 
-    max-height: 400px; 
-    border: 1px dashed var(--accent-color); 
-    background-color: rgba(105, 74, 56, 0.05); 
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
+  /* LAYOUT GRID 2 GAMBAR */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; width: 100%; height: 100%; }
+  .grid-2 img { width: 100%; height: 100%; object-fit: cover; border-radius: 2px; }
 
-  .placeholder-text { 
-    font-family: var(--font-body); 
-    font-size: 1rem; 
-    color: var(--accent-color); 
-    letter-spacing: 0.05em; 
-    opacity: 0.7; 
-  }
+  /* LAYOUT GRID BENTO BOX (5 GAMBAR) */
+  .grid-5 { display: grid; grid-template-columns: 2fr 1fr; gap: 0.5rem; width: 100%; height: 100%; }
+  .grid-5 .main-img { width: 100%; height: 100%; }
+  .grid-5 .main-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 2px; }
+  .grid-5 .side-imgs { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 0.5rem; width: 100%; height: 100%; }
+  .grid-5 .side-imgs img { width: 100%; height: 100%; object-fit: cover; border-radius: 2px; }
 
+  /* ATURAN PDF PRINT */
   @media print {
     #journey { margin-bottom: 3rem; }
     .story-chapter { gap: 2rem; margin-bottom: 3rem; page-break-inside: avoid; }
-    .story-text p { font-size: 1rem; }
     .story-bridge { margin: 3rem auto; padding: 1.5rem; page-break-inside: avoid; }
+    .custom-frame { border-width: 6px; padding: 0.75rem; page-break-inside: avoid; }
     
-    .custom-frame { 
-      border-width: 6px; 
-      padding: 0.75rem;
-      page-break-inside: avoid; 
-    }
-    .project-placeholder {
-      background-color: #FDFDFB; 
-      border-color: #cccccc;
-      page-break-inside: avoid;
-    }
+    .gallery-slot { page-break-inside: avoid; }
+    .browser-style { box-shadow: none; border-color: #cccccc; }
+    .browser-header { background-color: #eeeeee; border-color: #cccccc; }
+    .clean-style { background-color: transparent; border-color: transparent; padding: 0;}
+    /* Memperkecil gap agar hemat ruang saat dicetak */
+    .grid-2, .grid-5, .grid-5 .side-imgs { gap: 0.25rem; }
   }
 </style>
