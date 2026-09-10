@@ -13,46 +13,57 @@ import Footer from '../components/Footer.astro';
   <Hero />
   <About />
 
-  <!-- BAGIAN JOURNEY -->
+  <!-- --- BAGIAN JOURNEY --- -->
   <section id="journey" class="container">
     <div class="section-header">
       <h2 class="heading-font section-title">My Journey</h2>
     </div>
 
-    <!-- BAB 1: PROGRAMMER -->
+    <!-- BAB 1: PROGRAMMER (Gambar Kiri, Teks Kanan) -->
     <div class="story-chapter">
       <div class="story-media">
         <div class="image-placeholder">
-          <span class="placeholder-text">Insert Journey Photo 1<br/>Size: 800 x 600 px (4:3)</span>
+          <span class="placeholder-text">Insert Photo: Academic/Tech Event<br/>Size: 800 x 600 px (4:3)</span>
         </div>
       </div>
       <div class="story-text">
         <h3 class="heading-font">The Engineering Path</h3>
         <p>
-          I started my journey fascinated by how data structures and algorithms could solve complex problems. From exploring the depths of Big Data architectures to dissecting Explainable AI models, my focus has always been on understanding the logic behind the curtain.
+          Starting Computer Science with zero programming background was intimidating, but I turned that insecurity into a relentless drive to learn. From my first lines of C, I aggressively expanded my stack—mastering frontend frameworks (Mantine/TypeScript), Big Data architectures, Python data processing, and Pentaho pipelines. 
         </p>
         <p>
-          But writing code in isolation wasn't enough. I wanted to build systems that people could actually interact with, driving me to bridge the gap between heavy backend data and intuitive frontend experiences.
+          Graduating from basic algorithms to building predictive models, my academic journey (currently at a 3.92 GPA) is proof of my commitment to continuous growth. Now, my focus is locked on Database Technology: learning how scalable, production-grade systems can solve complex business puzzles.
         </p>
       </div>
     </div>
 
-    <!-- BAB 2: PAROKI -->
+    <!-- BAB 2: PAROKI (Teks Kiri, Gambar Kanan) -->
     <div class="story-chapter reverse-layout">
       <div class="story-text">
-        <h3 class="heading-font">Community & Leadership</h3>
+        <h3 class="heading-font">Growing Through Community</h3>
         <p>
-          Beyond the screen, I serve actively in the Youth Ministry (Seksi Kepemudaan Paroki). This is where I learned that the most complex systems aren't made of code, but of people. 
+          Beyond the screen, I serve as the Territorial Division Lead at my Parish Youth Ministry (OMK Kedoya), managing community development across diverse neighborhoods. For an introvert, continuous diplomacy can be exhausting. 
         </p>
         <p>
-          Organizing events, managing diverse team dynamics, and listening to the community's needs taught me invaluable lessons in empathy and leadership. It rewired my brain to approach technology not just as a tool for computation, but as a medium to empower communities and solve real human problems.
+          Yet, a realization during a retreat—that <em>"faith is meant to be shared"</em>—shifted my perspective. I learned to focus on the mission over my discomfort. This role taught me a profound lesson not found in any syllabus: how to lead without formal authority, purely through trust, active listening, and service.
         </p>
       </div>
       <div class="story-media">
         <div class="image-placeholder">
-          <span class="placeholder-text">Insert Journey Photo 2<br/>Size: 800 x 600 px (4:3)</span>
+          <span class="placeholder-text">Insert Photo: Parish/Youth Ministry<br/>Size: 800 x 600 px (4:3)</span>
         </div>
       </div>
+    </div>
+
+    <!-- BAB 3: SINTESIS (Tengah, Jembatan menuju Proyek) -->
+    <div class="story-bridge">
+      <h3 class="heading-font">Where Both Worlds Meet</h3>
+      <p>
+        Ultimately, my technical and social worlds collided. I saw my parish struggling to manage data across 10 regions and 45 neighborhoods using scattered spreadsheets. Applying the systems-thinking I learned in CS, I engineered a digital directory and attendance system. 
+      </p>
+      <p class="highlight-text">
+        I realized then: technical skill without social empathy creates systems nobody uses, while leadership without the right tools doesn't scale. The intersection of both is exactly where I build.
+      </p>
     </div>
   </section>
 
@@ -214,6 +225,46 @@ import Footer from '../components/Footer.astro';
     line-height: 1;
     padding-right: 0.5rem;
     padding-top: 0.2rem;
+  }
+
+  /* --- STYLING UNTUK STORY BRIDGE (BAB 3) --- */
+  .story-bridge {
+    max-width: 800px;
+    margin: 6rem auto 4rem auto;
+    text-align: center;
+    padding: 3rem;
+    background-color: rgba(105, 74, 56, 0.03); /* Latar belakang sangat halus */
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+  }
+
+  .story-bridge h3 {
+    font-size: 2.2rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+  }
+
+  .story-bridge p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+  }
+
+  .story-bridge .highlight-text {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--accent-color);
+    margin-top: 2rem;
+  }
+
+  @media print {
+    .story-bridge {
+      margin: 3rem auto;
+      padding: 1.5rem;
+      page-break-inside: avoid;
+    }
   }
 
   /* --- STYLING UNTUK IMAGE PLACEHOLDER --- */
