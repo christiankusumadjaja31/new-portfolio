@@ -299,4 +299,25 @@ import Footer from '../components/Footer.astro';
     .browser-style { box-shadow: none; border-color: #cccccc; }
     .browser-header { background-color: #eeeeee; border-color: #cccccc; }
   }
+
+  /* --- MOBILE RESPONSIVE --- */
+  @media (max-width: 768px) {
+    .container { padding: 0 1.25rem; }
+    
+    /* Journey Section */
+    .section-title { font-size: 2.2rem; }
+    .story-chapter { grid-template-columns: 1fr; gap: 2rem; margin-bottom: 3rem; }
+    .reverse-layout .story-media { order: -1; } /* Memaksa foto selalu di atas teks saat di HP */
+    .story-bridge { margin: 3rem auto; padding: 1.5rem; }
+    .story-bridge h3 { font-size: 1.8rem; }
+    
+    /* Project Gallery Slots */
+    .gallery-slot { margin-bottom: 1rem; }
+    
+    /* Mengubah susunan Grid Gambar agar bertumpuk di HP */
+    .grid-2-perfect { display: flex; flex-direction: column; }
+    
+    .grid-5-perfect { display: flex; flex-direction: column; }
+    .grid-5-perfect .main-img img { aspect-ratio: 16 / 9; } /* Mengunci rasio gambar utama */
+  }
 </style>

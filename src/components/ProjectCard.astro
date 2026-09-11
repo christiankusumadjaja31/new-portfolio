@@ -119,4 +119,13 @@ const { number, title, context, summary, impacts, learnings, repoUrl } = Astro.p
     .project-card { padding: 1rem 0; page-break-inside: avoid; }
     .project-footer { display: none; } 
   }
+
+  /* --- MOBILE RESPONSIVE --- */
+  @media (max-width: 768px) {
+    .project-card { padding: 2rem 0; }
+    .project-title { font-size: 1.6rem; }
+    .project-number { font-size: 1.4rem; }
+    .project-details { grid-template-columns: 1fr; gap: 1.5rem; } /* Menumpuk Impact & Learnings */
+    .project-footer { justify-content: flex-start; }
+  }
 </style>
