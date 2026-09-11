@@ -23,8 +23,7 @@ import Footer from '../components/Footer.astro';
     <div class="story-chapter">
       <div class="story-media">
         <div class="custom-frame landscape-frame">
-          <!-- Ganti dengan fotomu -->
-          <img src="/foto-kampus.jpg" alt="Academic Event" class="story-img" />
+          <img src="/the-engineering-path.png" alt="Academic Event" class="story-img" />
         </div>
       </div>
       <div class="story-text">
@@ -51,8 +50,7 @@ import Footer from '../components/Footer.astro';
       </div>
       <div class="story-media">
         <div class="custom-frame landscape-frame">
-          <!-- Ganti dengan fotomu -->
-          <img src="/foto-paroki.jpg" alt="Parish Ministry" class="story-img" />
+          <img src="/community-pic.png" alt="Parish Ministry" class="story-img" />
         </div>
       </div>
     </div>
@@ -72,7 +70,7 @@ import Footer from '../components/Footer.astro';
   <!-- BAGIAN PROYEK -->
   <section id="projects" class="container">
     
-    <!-- PROJECT 1: 5 GAMBAR (WEB BROWSER STYLE) -->
+    <!-- PROJECT 1: 5 GAMBAR (BENTO GRID 5) -->
     <ProjectCard 
       number="1"
       title="Church Directory Web Platform"
@@ -86,20 +84,23 @@ import Footer from '../components/Footer.astro';
         <div class="browser-header">
           <span class="browser-dot dot-red"></span><span class="browser-dot dot-yellow"></span><span class="browser-dot dot-green"></span>
         </div>
-        <!-- Grid 5 (1 Kiri Besar, 4 Kanan Kecil) -->
-        <div class="grid-content grid-5">
-          <div class="main-img"><img src="/p1-gambar1.jpg" alt="Main UI" /></div>
+        
+        <!-- STRUKTUR BENTO BOX DIPERBARUI -->
+        <div class="grid-content grid-5-perfect">
+          <div class="main-img">
+            <img src="/direktori-1.png" alt="Main UI" />
+          </div>
           <div class="side-imgs">
-            <img src="/p1-gambar2.jpg" alt="Feature 1" />
-            <img src="/p1-gambar3.jpg" alt="Feature 2" />
-            <img src="/p1-gambar4.jpg" alt="Feature 3" />
-            <img src="/p1-gambar5.jpg" alt="Feature 4" />
+            <img src="/direktori-2.png" alt="Feature 1" />
+            <img src="/direktori-3.png" alt="Feature 2" />
+            <img src="/direktori-4.png" alt="Feature 3" />
+            <img src="/direktori-5.png" alt="Feature 4" />
           </div>
         </div>
       </div>
     </ProjectCard>
 
-    <!-- PROJECT 2: 2 GAMBAR (WEB BROWSER STYLE) -->
+    <!-- PROJECT 2: 2 GAMBAR (GRID 2) -->
     <ProjectCard 
       number="2"
       title="PoestaKas Frontend Interface"
@@ -113,15 +114,15 @@ import Footer from '../components/Footer.astro';
         <div class="browser-header">
           <span class="browser-dot dot-red"></span><span class="browser-dot dot-yellow"></span><span class="browser-dot dot-green"></span>
         </div>
-        <!-- Grid 2 (Dibelah 50:50) -->
-        <div class="grid-content grid-2">
-          <img src="/p2-gambar1.jpg" alt="Poesta UI 1" />
-          <img src="/p2-gambar2.jpg" alt="Poesta UI 2" />
+        
+        <div class="grid-content grid-2-perfect">
+          <img src="/poestakas-1.jpeg" alt="Poesta UI 1" />
+          <img src="/poestakas-2.jpeg" alt="Poesta UI 2" />
         </div>
       </div>
     </ProjectCard>
 
-    <!-- PROJECT 3: 5 GAMBAR (CLEAN DATA STYLE) -->
+    <!-- PROJECT 3: 5 GAMBAR (BENTO GRID 5 - CLEAN) -->
     <ProjectCard 
       number="3"
       title="Enterprise Data Integration Pipeline"
@@ -132,20 +133,21 @@ import Footer from '../components/Footer.astro';
       learnings={["Deepened understanding of database schema design and backend data integrity.", "Learned to troubleshoot data bottlenecks and ensure structural reliability."]}
     >
       <div class="gallery-slot clean-style">
-        <!-- Grid 5 (1 Kiri Besar, 4 Kanan Kecil) Tanpa Header Browser -->
-        <div class="grid-content grid-5">
-          <div class="main-img"><img src="/p3-gambar1.jpg" alt="Pipeline Diagram" /></div>
+        <div class="grid-content grid-5-perfect">
+          <div class="main-img">
+            <img src="/data-modeling.png" alt="Pipeline Diagram" />
+          </div>
           <div class="side-imgs">
-            <img src="/p3-gambar2.jpg" alt="Data 1" />
-            <img src="/p3-gambar3.jpg" alt="Data 2" />
-            <img src="/p3-gambar4.jpg" alt="Data 3" />
-            <img src="/p3-gambar5.jpg" alt="Data 4" />
+            <img src="/data-transformation.png" alt="Data 1" />
+            <img src="/data-validation.png" alt="Data 2" />
+            <img src="/ml-ready.png" alt="Data 3" />
+            <img src="/job.png" alt="Data 4" />
           </div>
         </div>
       </div>
     </ProjectCard>
 
-    <!-- PROJECT 4: 1 GAMBAR (CLEAN DATA STYLE) -->
+    <!-- PROJECT 4: 1 GAMBAR (GRID 1 - CLEAN) -->
     <ProjectCard 
       number="4"
       title="Maven Roasters Business Dashboard"
@@ -156,14 +158,13 @@ import Footer from '../components/Footer.astro';
       learnings={["Learned to bridge the gap between raw backend data and frontend business strategy.", "Mastered the art of presenting technical metrics as digestible visual insights."]}
     >
       <div class="gallery-slot clean-style">
-        <!-- Grid 1 (Penuh 100%) -->
-        <div class="grid-content grid-1">
-          <img src="/p4-gambar1.jpg" alt="Tableau Dashboard" />
+        <div class="grid-content grid-1-perfect">
+          <img src="/maven-dashboard.png" alt="Tableau Dashboard" />
         </div>
       </div>
     </ProjectCard>
 
-    <!-- PROJECT 5: 2 GAMBAR (CLEAN DATA STYLE) -->
+    <!-- PROJECT 5: 2 GAMBAR (GRID 2 - CLEAN) -->
     <ProjectCard 
       number="5"
       title="Analytical Prediction Model Evaluation"
@@ -174,10 +175,9 @@ import Footer from '../components/Footer.astro';
       learnings={["Gained invaluable insights into data leakage, overfitting, and the importance of critical model evaluation.", "Learned that identifying a system's vulnerability is just as crucial as building it."]}
     >
       <div class="gallery-slot clean-style">
-        <!-- Grid 2 (Dibelah 50:50) -->
-        <div class="grid-content grid-2">
-          <img src="/p5-gambar1.jpg" alt="ML Graph 1" />
-          <img src="/p5-gambar2.jpg" alt="ML Graph 2" />
+        <div class="grid-content grid-2-perfect">
+          <img src="/streamlit-dashboard-1.png" alt="ML Graph 1" />
+          <img src="/streamlit-dashboard-2.png" alt="ML Graph 2" />
         </div>
       </div>
     </ProjectCard>
@@ -204,33 +204,29 @@ import Footer from '../components/Footer.astro';
   /* BINGKAI TEBAL COKELAT & PUTIH (KHUSUS JOURNEY) */
   .custom-frame { background-color: #FFFFFF; border: 12px solid var(--accent-color); padding: 1rem; display: flex; justify-content: center; align-items: center; overflow: hidden; }
   .landscape-frame { width: 100%; aspect-ratio: 4 / 3; }
-  .story-img { width: 100%; height: 100%; object-fit: cover; }
+  .story-img { width: 100%; height: 100%; object-fit: cover; } 
 
-  /* --- SISTEM SLOT GAMBAR PROJECT (TIDAK AKAN BOCOR/MELEBIHI UKURAN) --- */
+  /* --- SISTEM SLOT GAMBAR PROJECT --- */
   .gallery-slot {
     width: 100%;
-    aspect-ratio: 16 / 9; /* Mengunci rasio memanjang */
-    max-height: 400px; /* Batas tinggi maksimal saat diprint */
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
   }
 
-  /* WRAPPER STYLE (Pilih Browser atau Clean) */
   .browser-style {
     border: 1px solid var(--border-color);
     border-radius: 6px;
-    background-color: #fff;
+    background-color: #FDFDFB;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Bayangan tipis */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
   }
 
   .clean-style {
     border: 1px solid var(--border-color);
     border-radius: 4px;
     overflow: hidden;
-    padding: 0.5rem;
-    background-color: rgba(105, 74, 56, 0.02);
+    background-color: #FDFDFB;
   }
 
   /* HEADER MAC BROWSER */
@@ -242,34 +238,88 @@ import Footer from '../components/Footer.astro';
     align-items: center;
     padding: 0 12px;
     gap: 6px;
-    flex-shrink: 0; /* Header tidak boleh menyusut */
+    flex-shrink: 0; 
   }
   .browser-dot { width: 10px; height: 10px; border-radius: 50%; }
   .dot-red { background-color: #FF5F56; }
   .dot-yellow { background-color: #FFBD2E; }
   .dot-green { background-color: #27C93F; }
 
-  /* MENGUNCI ISI GRID DI DALAM SLOT */
+  /* KONTEN GRID UMUM */
   .grid-content {
     width: 100%;
-    flex-grow: 1; /* Sisa tinggi slot digunakan oleh gambar sepenuhnya */
-    overflow: hidden;
+    padding: 0.5rem; 
+    background-color: #FDFDFB; /* Menyamarkan sela-sela terkecil */
   }
 
-  /* LAYOUT GRID 1 GAMBAR */
-  .grid-1 { width: 100%; height: 100%; }
-  .grid-1 img { width: 100%; height: 100%; object-fit: cover; }
+  /* BORDER HALUS PADA SEMUA GAMBAR PROJECT */
+  .grid-content img {
+    border: 1px solid rgba(0,0,0,0.1); 
+    border-radius: 2px;
+    background-color: #ffffff;
+  }
 
-  /* LAYOUT GRID 2 GAMBAR */
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; width: 100%; height: 100%; }
-  .grid-2 img { width: 100%; height: 100%; object-fit: cover; border-radius: 2px; }
+  /* ----------------------------------------------------
+     KUNCI UTAMA: OBJECT-FIT: CONTAIN (ANTI-POTONG 100%)
+     ---------------------------------------------------- */
 
-  /* LAYOUT GRID BENTO BOX (5 GAMBAR) */
-  .grid-5 { display: grid; grid-template-columns: 2fr 1fr; gap: 0.5rem; width: 100%; height: 100%; }
-  .grid-5 .main-img { width: 100%; height: 100%; }
-  .grid-5 .main-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 2px; }
-  .grid-5 .side-imgs { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 0.5rem; width: 100%; height: 100%; }
-  .grid-5 .side-imgs img { width: 100%; height: 100%; object-fit: cover; border-radius: 2px; }
+  /* 1. LAYOUT 1 GAMBAR */
+  .grid-1-perfect { width: 100%; }
+  .grid-1-perfect img { 
+    width: 100%; 
+    aspect-ratio: 16 / 9; 
+    object-fit: contain; /* Tidak akan memotong pinggiran gambar */
+    display: block; 
+  }
+
+  /* 2. LAYOUT 2 GAMBAR (DIJEJER 50:50) */
+  .grid-2-perfect {
+    display: flex; 
+    gap: 0.5rem; 
+    width: 100%;
+  }
+  .grid-2-perfect img { 
+    flex: 1; /* Dibelah persis di tengah */
+    width: 100%; 
+    aspect-ratio: 16 / 9; 
+    object-fit: contain; /* Tidak akan memotong pinggiran gambar */
+    display: block; 
+  }
+
+  /* 3. LAYOUT BENTO BOX 5 GAMBAR (1 Kiri Besar, 4 Kanan Kecil) */
+  .grid-5-perfect { 
+    display: flex; 
+    gap: 0.5rem; 
+    width: 100%;
+  }
+  
+  .grid-5-perfect .main-img { 
+    flex: 1; /* Sisi kiri mengambil tepat 50% lebar */
+    display: flex;
+    align-items: stretch;
+  }
+  
+  .grid-5-perfect .main-img img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; /* Tidak akan memotong pinggiran gambar besar! */
+    display: block; 
+  }
+
+  .grid-5-perfect .side-imgs { 
+    flex: 1; /* Sisi kanan mengambil sisa 50% lebar */
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 0.5rem; 
+  }
+  
+  .grid-5-perfect .side-imgs img { 
+    width: 100%; 
+    height: 100%; 
+    aspect-ratio: 16 / 9; 
+    object-fit: contain; /* Tidak akan memotong pinggiran gambar kecil */
+    display: block; 
+  }
 
   /* ATURAN PDF PRINT */
   @media print {
@@ -281,8 +331,5 @@ import Footer from '../components/Footer.astro';
     .gallery-slot { page-break-inside: avoid; }
     .browser-style { box-shadow: none; border-color: #cccccc; }
     .browser-header { background-color: #eeeeee; border-color: #cccccc; }
-    .clean-style { background-color: transparent; border-color: transparent; padding: 0;}
-    /* Memperkecil gap agar hemat ruang saat dicetak */
-    .grid-2, .grid-5, .grid-5 .side-imgs { gap: 0.25rem; }
   }
 </style>
