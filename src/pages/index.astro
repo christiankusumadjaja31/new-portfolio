@@ -85,8 +85,8 @@ import Footer from '../components/Footer.astro';
           <span class="browser-dot dot-red"></span><span class="browser-dot dot-yellow"></span><span class="browser-dot dot-green"></span>
         </div>
         
-        <!-- STRUKTUR BENTO BOX DIPERBARUI -->
-        <div class="grid-content grid-5-perfect">
+        <!-- KUNCI: Menambahkan class bg-dark agar latar belakangnya gelap menyatu dengan screenshot -->
+        <div class="grid-content grid-5-perfect bg-dark">
           <div class="main-img">
             <img src="/direktori-1.png" alt="Main UI" />
           </div>
@@ -133,7 +133,8 @@ import Footer from '../components/Footer.astro';
       learnings={["Deepened understanding of database schema design and backend data integrity.", "Learned to troubleshoot data bottlenecks and ensure structural reliability."]}
     >
       <div class="gallery-slot clean-style">
-        <div class="grid-content grid-5-perfect">
+        <!-- KUNCI: Menambahkan class bg-white agar latar belakang sisa berwarna putih bersih -->
+        <div class="grid-content grid-5-perfect bg-white">
           <div class="main-img">
             <img src="/data-modeling.png" alt="Pipeline Diagram" />
           </div>
@@ -158,7 +159,8 @@ import Footer from '../components/Footer.astro';
       learnings={["Learned to bridge the gap between raw backend data and frontend business strategy.", "Mastered the art of presenting technical metrics as digestible visual insights."]}
     >
       <div class="gallery-slot clean-style">
-        <div class="grid-content grid-1-perfect">
+        <!-- Untuk ini kubiarkan bg-white juga agar bersih -->
+        <div class="grid-content grid-1-perfect bg-white">
           <img src="/maven-dashboard.png" alt="Tableau Dashboard" />
         </div>
       </div>
@@ -175,7 +177,8 @@ import Footer from '../components/Footer.astro';
       learnings={["Gained invaluable insights into data leakage, overfitting, and the importance of critical model evaluation.", "Learned that identifying a system's vulnerability is just as crucial as building it."]}
     >
       <div class="gallery-slot clean-style">
-        <div class="grid-content grid-2-perfect">
+        <!-- Untuk ini kubiarkan bg-white juga agar bersih -->
+        <div class="grid-content grid-2-perfect bg-white">
           <img src="/streamlit-dashboard-1.png" alt="ML Graph 1" />
           <img src="/streamlit-dashboard-2.png" alt="ML Graph 2" />
         </div>
@@ -249,77 +252,41 @@ import Footer from '../components/Footer.astro';
   .grid-content {
     width: 100%;
     padding: 0.5rem; 
-    background-color: #FDFDFB; /* Menyamarkan sela-sela terkecil */
+    background-color: #FDFDFB; 
   }
 
-  /* BORDER HALUS PADA SEMUA GAMBAR PROJECT */
+  /* BORDER & BACKGROUND DEFAULT (Bila tidak pakai modifier) */
   .grid-content img {
     border: 1px solid rgba(0,0,0,0.1); 
     border-radius: 2px;
-    background-color: #ffffff;
+    background-color: rgba(105, 74, 56, 0.05); 
   }
 
-  /* ----------------------------------------------------
-     KUNCI UTAMA: OBJECT-FIT: CONTAIN (ANTI-POTONG 100%)
-     ---------------------------------------------------- */
+  /* MODIFIER BACKGROUND CUSTOM */
+  .grid-content.bg-dark img {
+    background-color: #1c1c1c; /* Abu-abu sangat gelap, mendekati warna UI Dashboardmu */
+    border: 1px solid #333333; /* Menyamarkan border agar tidak kontras */
+  }
+
+  .grid-content.bg-white img {
+    background-color: #ffffff; /* Putih murni untuk diagram Pentaho/Streamlit */
+    border: 1px solid #eeeeee; /* Border super halus untuk tema terang */
+  }
 
   /* 1. LAYOUT 1 GAMBAR */
   .grid-1-perfect { width: 100%; }
-  .grid-1-perfect img { 
-    width: 100%; 
-    aspect-ratio: 16 / 9; 
-    object-fit: contain; /* Tidak akan memotong pinggiran gambar */
-    display: block; 
-  }
+  .grid-1-perfect img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; display: block; }
 
   /* 2. LAYOUT 2 GAMBAR (DIJEJER 50:50) */
-  .grid-2-perfect {
-    display: flex; 
-    gap: 0.5rem; 
-    width: 100%;
-  }
-  .grid-2-perfect img { 
-    flex: 1; /* Dibelah persis di tengah */
-    width: 100%; 
-    aspect-ratio: 16 / 9; 
-    object-fit: contain; /* Tidak akan memotong pinggiran gambar */
-    display: block; 
-  }
+  .grid-2-perfect { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; width: 100%; }
+  .grid-2-perfect img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; display: block; }
 
-  /* 3. LAYOUT BENTO BOX 5 GAMBAR (1 Kiri Besar, 4 Kanan Kecil) */
-  .grid-5-perfect { 
-    display: flex; 
-    gap: 0.5rem; 
-    width: 100%;
-  }
-  
-  .grid-5-perfect .main-img { 
-    flex: 1; /* Sisi kiri mengambil tepat 50% lebar */
-    display: flex;
-    align-items: stretch;
-  }
-  
-  .grid-5-perfect .main-img img { 
-    width: 100%; 
-    height: 100%; 
-    object-fit: contain; /* Tidak akan memotong pinggiran gambar besar! */
-    display: block; 
-  }
-
-  .grid-5-perfect .side-imgs { 
-    flex: 1; /* Sisi kanan mengambil sisa 50% lebar */
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    gap: 0.5rem; 
-  }
-  
-  .grid-5-perfect .side-imgs img { 
-    width: 100%; 
-    height: 100%; 
-    aspect-ratio: 16 / 9; 
-    object-fit: contain; /* Tidak akan memotong pinggiran gambar kecil */
-    display: block; 
-  }
+  /* 3. LAYOUT BENTO BOX 5 GAMBAR */
+  .grid-5-perfect { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; width: 100%; }
+  .grid-5-perfect .main-img { width: 100%; height: 100%; }
+  .grid-5-perfect .main-img img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .grid-5-perfect .side-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; height: 100%; }
+  .grid-5-perfect .side-imgs img { width: 100%; height: 100%; object-fit: contain; display: block; }
 
   /* ATURAN PDF PRINT */
   @media print {
@@ -328,7 +295,7 @@ import Footer from '../components/Footer.astro';
     .story-bridge { margin: 3rem auto; padding: 1.5rem; page-break-inside: avoid; }
     .custom-frame { border-width: 6px; padding: 0.75rem; page-break-inside: avoid; }
     
-    .gallery-slot { page-break-inside: avoid; }
+    .gallery-slot { page-break-inside: avoid; margin-bottom: 1.5rem; }
     .browser-style { box-shadow: none; border-color: #cccccc; }
     .browser-header { background-color: #eeeeee; border-color: #cccccc; }
   }
