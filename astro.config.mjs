@@ -1,5 +1,9 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  site: 'https://christiankusumadjaja31.github.io',
+  base: '/portfolio', // Ganti 'portfolio' dengan nama repositori GitHub-mu nanti
+});
+
+
