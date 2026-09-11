@@ -15,15 +15,19 @@
       
       <div class="about-text">
         <p>
-          As a Computer Science student specializing in Database Technology, my true passion lies in the foundation of technology: turning chaotic, fragmented data into structured, scalable solutions. While many are drawn to the surface-level magic of applications, I am captivated by what happens behind the scenes—the data engineering, the ETL pipelines, and the backend architecture that makes everything else possible.
+          As a Computer Science student specializing in Database Technology, I am captivated by what happens behind the scenes. My passion lies in turning chaotic, fragmented data into structured, scalable solutions through robust data engineering, ETL pipelines, and backend architecture.
         </p>
         <p>
-          I thrive on solving structural puzzles. A system is only as good as the data feeding it, which is why I focus on ensuring that information flows are robust, clean, and seamlessly integrated. From processing complex datasets to modeling star schemas for business intelligence, I build the quiet engines that drive informed decision-making.
-        </p>
-        <p>
-          Ultimately, I engineer with empathy. Whether I am architecting a data pipeline for a corporate dashboard or deploying a management system for a local community, my guiding principle remains the same. I aim to bridge complex technical architecture with human-centric design, ensuring that the systems I build don't just process data, but truly empower the people who rely on them.
+          I thrive on solving structural puzzles to build the quiet engines that drive informed decision-making. Ultimately, I engineer with empathy—bridging complex technical architecture with human-centric design to ensure the systems I build truly empower the people who rely on them.
         </p>
       </div>
+
+      <!-- TOMBOL DOWNLOAD DIKEMBALIKAN -->
+      <div class="action-buttons">
+        <a href="/CV_Christian_Kusumadjaja.pdf" target="_blank" class="btn btn-primary">Download CV</a>
+        <a href="javascript:window.print()" class="btn btn-outline">Save as PDF</a>
+      </div>
+
     </div>
 
   </div>
@@ -39,7 +43,7 @@
 
   .about-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Membagi layout 1/3 untuk Judul, 2/3 untuk Konten */
+    grid-template-columns: 1fr 2fr; 
     gap: 4rem;
     align-items: flex-start;
   }
@@ -50,7 +54,7 @@
     color: var(--text-color);
     margin: 0;
     position: sticky;
-    top: 100px; /* Membuat judul tetap terlihat saat di-scroll di laptop */
+    top: 100px; 
   }
 
   .about-content {
@@ -81,34 +85,68 @@
     margin: 0;
   }
 
+  /* --- GAYA TOMBOL DOWNLOAD --- */
+  .action-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .btn-primary {
+    background-color: var(--accent-color);
+    color: #FFFFFF;
+    border: 2px solid var(--accent-color);
+  }
+
+  .btn-primary:hover {
+    background-color: transparent;
+    color: var(--accent-color);
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+  }
+
+  .btn-outline:hover {
+    background-color: var(--accent-color);
+    color: #FFFFFF;
+  }
+
+  /* Sembunyikan tombol saat dicetak menjadi PDF agar halamannya bersih */
   @media print {
     #about { padding-top: 2rem; padding-bottom: 3rem; margin-bottom: 2rem; page-break-inside: avoid; }
     .about-grid { gap: 2rem; }
     .about-title h2 { font-size: 2rem; position: static; }
     .about-statement h3 { font-size: 1.8rem; }
     .about-text p { font-size: 1.05rem; }
+    .action-buttons { display: none !important; } 
   }
 
   /* --- MOBILE RESPONSIVE --- */
   @media (max-width: 768px) {
-    #about { 
-      padding-top: 2rem; 
-      padding-bottom: 3rem; 
-      margin-bottom: 3rem; 
-    }
+    #about { padding-top: 2rem; padding-bottom: 3rem; margin-bottom: 3rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .about-title h2 { position: static; font-size: 2.2rem; }
+    .about-statement h3 { font-size: 1.8rem; }
     
-    .about-grid { 
-      grid-template-columns: 1fr; /* Berubah menjadi 1 kolom ke bawah di HP */
-      gap: 2rem; 
-    }
-    
-    .about-title h2 { 
-      position: static; 
-      font-size: 2.2rem;
-    }
-    
-    .about-statement h3 { 
-      font-size: 1.8rem; 
-    }
+    /* Tombol membentang penuh di layar HP */
+    .action-buttons { flex-direction: column; gap: 1rem; }
+    .btn { width: 100%; }
   }
 </style>
