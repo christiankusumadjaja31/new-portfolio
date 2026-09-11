@@ -19,7 +19,7 @@ import Footer from '../components/Footer.astro';
       <h2 class="heading-font section-title">My Journey</h2>
     </div>
 
-    <!-- BAB 1 -->
+    <!-- BAB 1: DIPERSINGKAT & PADAT -->
     <div class="story-chapter">
       <div class="story-media">
         <div class="custom-frame landscape-frame">
@@ -27,25 +27,25 @@ import Footer from '../components/Footer.astro';
         </div>
       </div>
       <div class="story-text">
-        <h3 class="heading-font">The Engineering Path</h3>
+        <h3 class="heading-font">From Zero to Belonging</h3>
         <p>
-          Starting Computer Science with zero programming background was intimidating, but I turned that insecurity into a relentless drive to learn. From my first lines of C, I aggressively expanded my stack—mastering frontend frameworks (Mantine/TypeScript), Big Data architectures, Python data processing, and Pentaho pipelines. 
+          Entering Computer Science with zero background was intimidating, but I turned that fear into a relentless drive to learn. Guided by peers and mentors, I expanded my knowledge from basic C to complex computational logic, gradually turning an unfamiliar world into a place where I belong.
         </p>
         <p>
-          Graduating from basic algorithms to building predictive models, my academic journey (currently at a 3.92 GPA) is proof of my commitment to continuous growth. Now, my focus is locked on Database Technology: learning how scalable, production-grade systems can solve complex business puzzles.
+          Now progressing with a 3.92 GPA, my focus is locked on Database Technology. I dig deep into Big Data architectures, Python processing, and Pentaho pipelines to solve real business puzzles, while refining my Agile collaboration skills and sharpening my logic through competitive SQL challenges.
         </p>
       </div>
     </div>
 
-    <!-- BAB 2 -->
+    <!-- BAB 2: DIPERSINGKAT & PADAT -->
     <div class="story-chapter reverse-layout">
       <div class="story-text">
         <h3 class="heading-font">Growing Through Community</h3>
         <p>
-          Beyond the screen, I serve as the Territorial Division Lead at my Parish Youth Ministry (OMK Kedoya), managing community development across diverse neighborhoods. For an introvert, continuous diplomacy can be exhausting. 
+          Beyond the screen, I serve as the Territorial Division Lead at my Parish Youth Ministry, uniting communities across 10 regions and 45 neighborhoods. For a natural introvert, this constant need for diplomacy was initially daunting.
         </p>
         <p>
-          Yet, a realization during a retreat—that <em>"faith is meant to be shared"</em>—shifted my perspective. I learned to focus on the mission over my discomfort. This role taught me a profound lesson not found in any syllabus: how to lead without formal authority, purely through trust, active listening, and service.
+          Yet, a realization that <em>"faith is meant to be shared"</em> shifted my perspective. By connecting over 350 youths through a unified system, I built a support network that empowered local leaders. It taught me a profound lesson no CS syllabus could: how to drive collective action and lead purely through trust and empathetic service.
         </p>
       </div>
       <div class="story-media">
@@ -55,14 +55,14 @@ import Footer from '../components/Footer.astro';
       </div>
     </div>
 
-    <!-- BAB 3 -->
+    <!-- BAB 3: DIPERSINGKAT & PADAT -->
     <div class="story-bridge">
       <h3 class="heading-font">Where Both Worlds Meet</h3>
       <p>
-        Ultimately, my technical and social worlds collided. I saw my parish struggling to manage data across 10 regions and 45 neighborhoods using scattered spreadsheets. Applying the systems-thinking I learned in CS, I engineered a digital directory and attendance system. 
+        Ultimately, my technical and social worlds collided. Seeing my parish struggle with scattered spreadsheets, I engineered a digital directory to manage data across 45 neighborhoods.
       </p>
       <p class="highlight-text">
-        I realized then: technical skill without social empathy creates systems nobody uses, while leadership without the right tools doesn't scale. The intersection of both is exactly where I build.
+        I realized then: technical skill without empathy creates systems nobody uses, while leadership without tools doesn't scale. The intersection of both is exactly where I build.
       </p>
     </div>
   </section>
@@ -70,7 +70,7 @@ import Footer from '../components/Footer.astro';
   <!-- BAGIAN PROYEK -->
   <section id="projects" class="container">
     
-    <!-- PROJECT 1: 5 GAMBAR (BENTO GRID 5) -->
+    <!-- PROJECT 1 -->
     <ProjectCard 
       number="1"
       title="Church Directory Web Platform"
@@ -84,12 +84,8 @@ import Footer from '../components/Footer.astro';
         <div class="browser-header">
           <span class="browser-dot dot-red"></span><span class="browser-dot dot-yellow"></span><span class="browser-dot dot-green"></span>
         </div>
-        
-        <!-- KUNCI: Menambahkan class bg-dark agar latar belakangnya gelap menyatu dengan screenshot -->
         <div class="grid-content grid-5-perfect bg-dark">
-          <div class="main-img">
-            <img src="/direktori-1.png" alt="Main UI" />
-          </div>
+          <div class="main-img"><img src="/direktori-1.png" alt="Main UI" /></div>
           <div class="side-imgs">
             <img src="/direktori-2.png" alt="Feature 1" />
             <img src="/direktori-3.png" alt="Feature 2" />
@@ -100,7 +96,7 @@ import Footer from '../components/Footer.astro';
       </div>
     </ProjectCard>
 
-    <!-- PROJECT 2: 2 GAMBAR (GRID 2) -->
+    <!-- PROJECT 2 -->
     <ProjectCard 
       number="2"
       title="PoestaKas Frontend Interface"
@@ -114,7 +110,6 @@ import Footer from '../components/Footer.astro';
         <div class="browser-header">
           <span class="browser-dot dot-red"></span><span class="browser-dot dot-yellow"></span><span class="browser-dot dot-green"></span>
         </div>
-        
         <div class="grid-content grid-2-perfect">
           <img src="/poestakas-1.jpeg" alt="Poesta UI 1" />
           <img src="/poestakas-2.jpeg" alt="Poesta UI 2" />
@@ -122,7 +117,7 @@ import Footer from '../components/Footer.astro';
       </div>
     </ProjectCard>
 
-    <!-- PROJECT 3: 5 GAMBAR (BENTO GRID 5 - CLEAN) -->
+    <!-- PROJECT 3 -->
     <ProjectCard 
       number="3"
       title="Enterprise Data Integration Pipeline"
@@ -133,11 +128,8 @@ import Footer from '../components/Footer.astro';
       learnings={["Deepened understanding of database schema design and backend data integrity.", "Learned to troubleshoot data bottlenecks and ensure structural reliability."]}
     >
       <div class="gallery-slot clean-style">
-        <!-- KUNCI: Menambahkan class bg-white agar latar belakang sisa berwarna putih bersih -->
         <div class="grid-content grid-5-perfect bg-white">
-          <div class="main-img">
-            <img src="/data-modeling.png" alt="Pipeline Diagram" />
-          </div>
+          <div class="main-img"><img src="/data-modeling.png" alt="Pipeline Diagram" /></div>
           <div class="side-imgs">
             <img src="/data-transformation.png" alt="Data 1" />
             <img src="/data-validation.png" alt="Data 2" />
@@ -148,7 +140,7 @@ import Footer from '../components/Footer.astro';
       </div>
     </ProjectCard>
 
-    <!-- PROJECT 4: 1 GAMBAR (GRID 1 - CLEAN) -->
+    <!-- PROJECT 4 -->
     <ProjectCard 
       number="4"
       title="Maven Roasters Business Dashboard"
@@ -159,14 +151,13 @@ import Footer from '../components/Footer.astro';
       learnings={["Learned to bridge the gap between raw backend data and frontend business strategy.", "Mastered the art of presenting technical metrics as digestible visual insights."]}
     >
       <div class="gallery-slot clean-style">
-        <!-- Untuk ini kubiarkan bg-white juga agar bersih -->
         <div class="grid-content grid-1-perfect bg-white">
           <img src="/maven-dashboard.png" alt="Tableau Dashboard" />
         </div>
       </div>
     </ProjectCard>
 
-    <!-- PROJECT 5: 2 GAMBAR (GRID 2 - CLEAN) -->
+    <!-- PROJECT 5 -->
     <ProjectCard 
       number="5"
       title="Analytical Prediction Model Evaluation"
@@ -177,7 +168,6 @@ import Footer from '../components/Footer.astro';
       learnings={["Gained invaluable insights into data leakage, overfitting, and the importance of critical model evaluation.", "Learned that identifying a system's vulnerability is just as crucial as building it."]}
     >
       <div class="gallery-slot clean-style">
-        <!-- Untuk ini kubiarkan bg-white juga agar bersih -->
         <div class="grid-content grid-2-perfect bg-white">
           <img src="/streamlit-dashboard-1.png" alt="ML Graph 1" />
           <img src="/streamlit-dashboard-2.png" alt="ML Graph 2" />
@@ -195,129 +185,88 @@ import Footer from '../components/Footer.astro';
   #journey { margin-bottom: 6rem; }
   .section-header { margin-bottom: 3rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; text-align: center; }
   .section-title { font-size: 2.8rem; color: var(--text-color); margin: 0; }
-  .story-chapter { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 5rem; }
-  .story-text h3 { font-size: 2rem; color: var(--accent-color); margin-bottom: 1.5rem; }
+  
+  /* KUNCI PERBAIKAN: Dikembalikan ke center karena panjang teks dan gambar sekarang seimbang */
+  .story-chapter { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 4rem; 
+    align-items: center; 
+    margin-bottom: 5rem; 
+  }
+  
+  .story-text h3 { font-size: 2rem; color: var(--accent-color); margin-bottom: 1.5rem; margin-top: 0; }
   .story-text p { font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.2rem; color: var(--text-color); }
   .story-text p:first-of-type::first-letter { font-family: var(--font-heading); font-size: 4rem; font-weight: 600; color: var(--accent-color); float: left; line-height: 1; padding-right: 0.5rem; padding-top: 0.2rem; }
-  .story-bridge { max-width: 800px; margin: 6rem auto 4rem auto; text-align: center; padding: 3rem; background-color: rgba(105, 74, 56, 0.03); border: 1px solid var(--border-color); border-radius: 4px; }
+  
+  .story-bridge { max-width: 800px; margin: 4rem auto; text-align: center; padding: 3rem; background-color: rgba(105, 74, 56, 0.03); border: 1px solid var(--border-color); border-radius: 4px; }
   .story-bridge h3 { font-size: 2.2rem; color: var(--accent-color); margin-bottom: 1.5rem; }
   .story-bridge p { font-size: 1.15rem; line-height: 1.8; color: var(--text-color); margin-bottom: 1.5rem; }
   .story-bridge .highlight-text { font-family: var(--font-heading); font-size: 1.4rem; font-style: italic; color: var(--accent-color); margin-top: 2rem; }
 
-  /* BINGKAI TEBAL COKELAT & PUTIH (KHUSUS JOURNEY) */
+  /* BINGKAI TEBAL COKELAT & PUTIH */
   .custom-frame { background-color: #FFFFFF; border: 12px solid var(--accent-color); padding: 1rem; display: flex; justify-content: center; align-items: center; overflow: hidden; }
   .landscape-frame { width: 100%; aspect-ratio: 4 / 3; }
   .story-img { width: 100%; height: 100%; object-fit: cover; } 
 
   /* --- SISTEM SLOT GAMBAR PROJECT --- */
-  .gallery-slot {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2rem;
-  }
-
-  .browser-style {
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    background-color: #FDFDFB;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
-  }
-
-  .clean-style {
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    overflow: hidden;
-    background-color: #FDFDFB;
-  }
+  .gallery-slot { width: 100%; display: flex; flex-direction: column; margin-bottom: 2rem; }
+  .browser-style { border: 1px solid var(--border-color); border-radius: 6px; background-color: #FDFDFB; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+  .clean-style { border: 1px solid var(--border-color); border-radius: 4px; overflow: hidden; background-color: #FDFDFB; }
 
   /* HEADER MAC BROWSER */
-  .browser-header {
-    height: 28px;
-    background-color: #F5F5F7;
-    border-bottom: 1px solid var(--border-color);
-    display: flex;
-    align-items: center;
-    padding: 0 12px;
-    gap: 6px;
-    flex-shrink: 0; 
-  }
+  .browser-header { height: 28px; background-color: #F5F5F7; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; padding: 0 12px; gap: 6px; flex-shrink: 0; }
   .browser-dot { width: 10px; height: 10px; border-radius: 50%; }
   .dot-red { background-color: #FF5F56; }
   .dot-yellow { background-color: #FFBD2E; }
   .dot-green { background-color: #27C93F; }
 
-  /* KONTEN GRID UMUM */
-  .grid-content {
-    width: 100%;
-    padding: 0.5rem; 
-    background-color: #FDFDFB; 
-  }
+  /* KONTEN GRID UMUM & WARNA BACKGROUND */
+  .grid-content { width: 100%; padding: 0.5rem; background-color: #FDFDFB; }
+  .grid-content img { border: 1px solid rgba(0,0,0,0.1); border-radius: 2px; background-color: rgba(105, 74, 56, 0.05); }
+  
+  .grid-content.bg-dark img { background-color: #1c1c1c; border: 1px solid #333333; }
+  .grid-content.bg-white img { background-color: #ffffff; border: 1px solid #eeeeee; }
 
-  /* BORDER & BACKGROUND DEFAULT (Bila tidak pakai modifier) */
-  .grid-content img {
-    border: 1px solid rgba(0,0,0,0.1); 
-    border-radius: 2px;
-    background-color: rgba(105, 74, 56, 0.05); 
-  }
-
-  /* MODIFIER BACKGROUND CUSTOM */
-  .grid-content.bg-dark img {
-    background-color: #1c1c1c; /* Abu-abu sangat gelap, mendekati warna UI Dashboardmu */
-    border: 1px solid #333333; /* Menyamarkan border agar tidak kontras */
-  }
-
-  .grid-content.bg-white img {
-    background-color: #ffffff; /* Putih murni untuk diagram Pentaho/Streamlit */
-    border: 1px solid #eeeeee; /* Border super halus untuk tema terang */
-  }
-
-  /* 1. LAYOUT 1 GAMBAR */
+  /* LAYOUT GRID GAMBAR */
   .grid-1-perfect { width: 100%; }
   .grid-1-perfect img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; display: block; }
-
-  /* 2. LAYOUT 2 GAMBAR (DIJEJER 50:50) */
+  
   .grid-2-perfect { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; width: 100%; }
   .grid-2-perfect img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; display: block; }
 
-  /* 3. LAYOUT BENTO BOX 5 GAMBAR */
   .grid-5-perfect { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; width: 100%; }
   .grid-5-perfect .main-img { width: 100%; height: 100%; }
   .grid-5-perfect .main-img img { width: 100%; height: 100%; object-fit: contain; display: block; }
   .grid-5-perfect .side-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; height: 100%; }
   .grid-5-perfect .side-imgs img { width: 100%; height: 100%; object-fit: contain; display: block; }
 
-  /* ATURAN PDF PRINT */
+  /* --- ATURAN PDF PRINT --- */
   @media print {
     #journey { margin-bottom: 3rem; }
     .story-chapter { gap: 2rem; margin-bottom: 3rem; page-break-inside: avoid; }
     .story-bridge { margin: 3rem auto; padding: 1.5rem; page-break-inside: avoid; }
     .custom-frame { border-width: 6px; padding: 0.75rem; page-break-inside: avoid; }
-    
     .gallery-slot { page-break-inside: avoid; margin-bottom: 1.5rem; }
     .browser-style { box-shadow: none; border-color: #cccccc; }
     .browser-header { background-color: #eeeeee; border-color: #cccccc; }
   }
 
-  /* --- MOBILE RESPONSIVE --- */
+  /* --- ATURAN MOBILE RESPONSIVE --- */
   @media (max-width: 768px) {
     .container { padding: 0 1.25rem; }
-    
-    /* Journey Section */
     .section-title { font-size: 2.2rem; }
+    
     .story-chapter { grid-template-columns: 1fr; gap: 2rem; margin-bottom: 3rem; }
-    .reverse-layout .story-media { order: -1; } /* Memaksa foto selalu di atas teks saat di HP */
+    .reverse-layout .story-media { order: -1; } 
+    
     .story-bridge { margin: 3rem auto; padding: 1.5rem; }
     .story-bridge h3 { font-size: 1.8rem; }
     
-    /* Project Gallery Slots */
     .gallery-slot { margin-bottom: 1rem; }
     
-    /* Mengubah susunan Grid Gambar agar bertumpuk di HP */
     .grid-2-perfect { display: flex; flex-direction: column; }
-    
     .grid-5-perfect { display: flex; flex-direction: column; }
-    .grid-5-perfect .main-img img { aspect-ratio: 16 / 9; } /* Mengunci rasio gambar utama */
+    .grid-5-perfect .main-img img { aspect-ratio: 16 / 9; } 
   }
 </style>
