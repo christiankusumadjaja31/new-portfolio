@@ -19,6 +19,7 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v3
         with:
+          node-version: 22 # <-- Ini adalah baris penawar error-nya
           package-manager: npm
 
   deploy:
